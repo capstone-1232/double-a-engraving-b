@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.0.0
+Version: 1.0.1
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -536,9 +536,7 @@ a {
 	color: #4169e1;
 }
 
-a:visited {
-	color: #800080;
-}
+
 
 a:hover,
 a:focus,
@@ -641,6 +639,7 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -651,6 +650,9 @@ textarea {
 	display: block;
 	width: 100%;
 }
+
+
+
 
 .main-navigation ul {
 	display: none;
@@ -692,6 +694,8 @@ textarea {
 	position: relative;
 }
 
+
+
 .main-navigation a {
 	display: block;
 	text-decoration: none;
@@ -701,6 +705,7 @@ textarea {
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	background-color: #404040;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -895,6 +900,11 @@ textarea {
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
+:root {
+  --main-color: #ff0000;
+  --chip-color: #3d4f08;
+}
+
 
 /* Accessibility
 --------------------------------------------- */
