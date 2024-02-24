@@ -23,12 +23,14 @@
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
 	<style>
+				.navbar {
+				background-color: #3d4f08;
+			}
 
 		@media screen and (max-width: 768px){
 			
-			.navbar {
-				background-color: #3d4f08;
-			}
+	
+			
 	
 			.container-fluid{
 				background-color: #3d4f08;
@@ -106,7 +108,8 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 						<div class="navbar-nav">
-							<?php
+							<div class="container">
+								<?php
 							wp_nav_menu(
 								array(
 									'theme_location' => 'menu-1',
@@ -114,6 +117,8 @@
 								)
 							);
 							?>
+							</div>
+							
 
 						</div>
 					</div>

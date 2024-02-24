@@ -18,14 +18,34 @@ get_header();
 <main id="primary" class="site-main">
     <div class="container">
         <h2>Welcome</h2>
-        <?php if ( has_post_thumbnail() ) : ?>
-        
-                <?php the_post_thumbnail( 'large' ); ?>
-          
+        <?php if (has_post_thumbnail()): ?>
+
+            <?php the_post_thumbnail('category-thumb'); ?>
+
         <?php endif; ?>
     </div>
-  
+
+    <div class="container">
+        <h2>Test!</h2>
+
+        <div class="landing-image-layout">
+            <?php
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => -1,
+            );
+            $loop = new WP_Query($args);
+            while ($loop->have_posts()){
+                $loop->the_post();
+                get_template_part('template-parts/content-landing-images');
+            }
     
+            ?>
+        </div>
+    </div>
+
+
+
 
 </main><!-- #main -->
 
