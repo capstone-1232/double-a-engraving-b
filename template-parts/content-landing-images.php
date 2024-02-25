@@ -10,7 +10,7 @@
 ?>
 
 
-<div class="landing-images">
+<div class="gallery-item">
 <?php the_post_thumbnail( 'category-thumb' );	 ?>
 
 </div>

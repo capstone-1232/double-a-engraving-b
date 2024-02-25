@@ -23,42 +23,44 @@
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
 	<style>
-				.navbar {
-				background-color: #3d4f08;
+		.navbar {
+			background-color: #3d4f08;
+		}
+
+		@media screen and (min-width: 768px) {
+			.menu{
+				display: flex;
+				flex-direction: column;
 			}
 
-		@media screen and (max-width: 768px){
 			
-	
 			
-	
-			.container-fluid{
-				background-color: #3d4f08;
-			}
-	
-			.menu{
-				list-style: none;
-				margin: 0;
-			}	
-	
-			.menu li{
-				
-				padding: 10px;
-			}
-	
-			li a{
-				text-decoration: none;
-				color: white;
-			}
 			.navbar-nav .nav-link {
 				border-right: 1px solid #fff;
 			}
-
+			
 		}
-		a:visited{
+		.menu li {
+			
+			padding: 10px;
+		}
+		
+		.menu {
+			list-style: none;
+			margin: 0;
+			flex-direction: row;
+			
+		}
+		
+		li a {
+			text-decoration: none;
+			color: white;
+		}
+		a:visited {
 			color: none;
 		}
-		</style>
+	</style>
+
 
 	<?php wp_head(); ?>
 
@@ -71,58 +73,37 @@
 			<?php esc_html_e('Skip to content', 'doubleaengraving'); ?>
 		</a>
 
-		<!-- <header id="masthead" class="site-header">
-			<div class="site-branding">
-				<?php
-				the_custom_logo();
-				if (is_front_page() && is_home()):
-					?>
-					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-							<?php bloginfo('name'); ?>
-						</a></h1>
-					<?php
-				else:
-					?>
-					<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-							<?php bloginfo('name'); ?>
-						</a></p>
-					<?php
-				endif;
-				$doubleaengraving_description = get_bloginfo('description', 'display');
-				if ($doubleaengraving_description || is_customize_preview()):
-					?>
-					<p class="site-description">
-						<?php echo $doubleaengraving_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped   ?>
-					</p>
-				<?php endif; ?>
-			</div> -->
-			<!-- .site-branding -->
 
+	</div>
+	<nav class="navbar navbar-expand-lg sticky-top">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+				aria-controls="offcanvas" aria-label="Toggle navigation">
+				<!-- Menu Icon -->
+				<svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18">
+					<path id="hamburger_icon" data-name="hamburger icon"
+						d="M4.5,27h21V24H4.5Zm0-7.5h21v-3H4.5ZM4.5,9v3h21V9Z" transform="translate(-4.5 -9)" />
+				</svg>
+			</button>
+			<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+				<div class="offcanvas-header">
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<div class="container">
 
-			<nav class="navbar navbar-expand-lg">
-				<div class="container-fluid">
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-						data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-						aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-						<div class="navbar-nav">
-							<div class="container">
-								<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'menu-1',
-									'menu_id' => 'primary-menu',
-								)
-							);
-							?>
-							</div>
-							
-
+						<?php
+									wp_nav_menu(
+										array(
+											'theme_location' => 'menu-1',
+											'menu_id' => 'primary-menu',
+										)
+									);
+									?>
 						</div>
 					</div>
-				</div>
-			</nav>
-			<!-- #site-navigation -->
-		</header><!-- #masthead -->
+
+			</div>
+	</nav>
+	<!-- #site-navigation -->
+	</header><!-- #masthead -->

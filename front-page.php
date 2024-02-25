@@ -16,33 +16,41 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-    <div class="container">
-        <h2>Welcome</h2>
-        <?php if (has_post_thumbnail()): ?>
 
-            <?php the_post_thumbnail('category-thumb'); ?>
+    <section class="container-fluid  bg-black">
+        <div class="container">
 
-        <?php endif; ?>
-    </div>
+            <h1 class="text-white pt-4">Welcome to Double A Engraving</h1>
+            <h5 class="text-white py-3"> Offering affordable, custom laser engravings on a variety of materials. If you
+                imagine it, I create it.</h5>
 
-    <div class="container">
+            <button class="btn btn-primary mb-4" type="button">Make a Request</button>
+
+        </div>
+    </section>
+
+
+
+    <section class="container px-3">
         <h2>Test!</h2>
 
-        <div class="landing-image-layout">
+        <div class="gallery gallery-columns-2 gallery-columns-4">
             <?php
             $args = array(
                 'post_type' => 'post',
                 'posts_per_page' => -1,
             );
             $loop = new WP_Query($args);
-            while ($loop->have_posts()){
+            while ($loop->have_posts()) {
                 $loop->the_post();
                 get_template_part('template-parts/content-landing-images');
+                ?>
+                <?php
             }
-    
+
             ?>
         </div>
-    </div>
+    </section>
 
 
 

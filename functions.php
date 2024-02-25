@@ -9,7 +9,7 @@
 
 if ( ! defined( 'doubleaengravingVERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'doubleaengravingVERSION', '1.0.3' );
+	define( 'doubleaengravingVERSION', '1.0.7' );
 }
 
 /**
@@ -47,6 +47,7 @@ function doubleaengraving_setup() {
 	add_theme_support( 'post-thumbnails' );
 	//add image sizing
 	add_image_size( 'category-thumb', 250, 250, true);
+	add_image_size( 'front-thumb', 350, 350, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
@@ -155,11 +156,17 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 // }
 // add_action( 'widgets_init', 'doubleaengraving_widgets_init' );
 
+
+
 /**
  * Enqueue scripts and styles.
  */
 function doubleaengraving_scripts() {
-	wp_enqueue_style( 'doubleaengraving-style', get_stylesheet_uri(), array(), doubleaengravingVERSION );
+	$stylesheet_uri = get_stylesheet_uri();
+	$stylesheet_path = get_template_directory() . '/style.css';
+	$stylesheet_version = filemtime($stylesheet_path);
+
+	wp_enqueue_style( 'doubleaengraving', $stylesheet_uri, array(), $stylesheet_version );
 	wp_style_add_data( 'doubleaengraving-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'doubleaengraving-navigation', get_template_directory_uri() . '/js/navigation.js', array(), doubleaengravingVERSION, true );

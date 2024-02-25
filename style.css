@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.0.1
+Version: 1.0.5
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -93,8 +93,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+	/* font-size: 2em; */
+	/* margin: 0.67em 0; */
 }
 
 /* Grouping content
@@ -639,11 +639,8 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
-.landing-image-layout{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 1.5em;
-}
+
+
 
 
 /*--------------------------------------------------------------
@@ -849,6 +846,10 @@ textarea {
 	width: 100%;
 }
 
+.gallery-item img {
+
+}
+
 .gallery-columns-2 {
 	grid-template-columns: repeat(2, 1fr);
 }
@@ -857,9 +858,13 @@ textarea {
 	grid-template-columns: repeat(3, 1fr);
 }
 
-.gallery-columns-4 {
-	grid-template-columns: repeat(4, 1fr);
+@media screen and (min-width: 992px) {
+	
+	.gallery-columns-4 {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
+
 
 .gallery-columns-5 {
 	grid-template-columns: repeat(5, 1fr);
@@ -909,6 +914,18 @@ textarea {
 :root {
   --main-color: #ff0000;
   --chip-color: #3d4f08;
+}
+
+.offcanvas-body {
+	background-color: #3d4f08;
+}
+
+.offcanvas-header{
+	background-color: #3d4f08;
+}
+
+.offcanvas-header .close {
+	color: #fff;
 }
 
 
