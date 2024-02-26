@@ -421,6 +421,14 @@ p {
 	margin-bottom: 1.5em;
 }
 
+h2{
+	font-size: 2rem;
+}
+
+h1{
+	font-size: 3rem;
+}
+
 dfn,
 cite,
 em,
@@ -639,6 +647,9 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
+.menu li a{
+	font-size: 2rem
+}
 
 
 
@@ -653,8 +664,38 @@ textarea {
 	display: block;
 	width: 100%;
 }
+/* removes bootstrap built-in styling so only svg appears on hamburg icon */
+.navbar-toggler{
+	background-color: #3d4f08;
+	border: #3d4f08;
+}
+.navbar-toggler:focus{
+	box-shadow: none;
+}
 
+.offcanvas-body {
+	background-color: #3d4f08;
+}
 
+.offcanvas-header{
+	background-color: #3d4f08;
+	padding-top: 1rem;
+	padding-bottom: 0;
+	border-bottom: 1px solid white;
+
+}
+
+.offcanvas-header .btn-close {
+	color: #fff;
+	margin: 0;
+}
+
+/* removes the styling of the bootstrap close so only the SVG appears */
+.svg-close{
+	background: none;
+	background-color: none;
+	border: none;
+}
 
 
 .main-navigation ul {
@@ -916,17 +957,6 @@ textarea {
   --chip-color: #3d4f08;
 }
 
-.offcanvas-body {
-	background-color: #3d4f08;
-}
-
-.offcanvas-header{
-	background-color: #3d4f08;
-}
-
-.offcanvas-header .close {
-	color: #fff;
-}
 
 
 /* Accessibility

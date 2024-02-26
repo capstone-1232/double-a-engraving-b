@@ -20,19 +20,24 @@ get_header();
     <section class="container-fluid  bg-black">
         <div class="container">
 
-            <h1 class="text-white pt-4">Welcome to Double A Engraving</h1>
+            <h1 class="text-white pt-4">Double-A Engraving</h1>
             <h5 class="text-white py-3"> Offering affordable, custom laser engravings on a variety of materials. If you
                 imagine it, I create it.</h5>
 
-            <button class="btn btn-primary mb-4" type="button">Make a Request</button>
+            <div class="d-grid col-6 col-lg-4">
 
+                <button class="btn btn-primary mb-4 justify-content-md-start" type="button">Make a Request</button>
+            </div>
         </div>
     </section>
 
 
 
-    <section class="container px-3">
-        <h2>Test!</h2>
+    <section class="container py-3 px-3">
+        <h2>Carved Collections</h2>
+        <p>Explore our collection and the versatility of engravings across
+            a range of materials. Click the button to view more categories.
+        </p>
 
         <div class="gallery gallery-columns-2 gallery-columns-4">
             <?php
@@ -49,6 +54,11 @@ get_header();
             }
 
             ?>
+        </div>
+
+        <div class="d-grid col-6 mx-auto col-lg-4">
+            <button class="btn btn-primary mb-4 justify-content-md-center"
+             type="button">View Catalog</button>
         </div>
     </section>
 
