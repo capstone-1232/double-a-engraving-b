@@ -22,6 +22,11 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Luxurious+Roman&display=swap"
+		rel="stylesheet">
 	<style>
 		.navbar {
 			background-color: #3d4f08;
@@ -93,7 +98,11 @@
 				aria-labelledby="offcanvasLabel">
 				<div class="offcanvas-header">
 					<button type="button" class="svg-close" data-bs-dismiss="offcanvas" aria-label="Close">
-					<svg xmlns="http://www.w3.org/2000/svg" fill="white" width="35" height="35" viewBox="0 0 1024 1024"><path d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"/></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="white" width="35" height="35"
+							viewBox="0 0 1024 1024">
+							<path
+								d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z" />
+						</svg>
 					</button>
 				</div>
 				<div class="offcanvas-body">

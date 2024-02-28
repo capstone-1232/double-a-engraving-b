@@ -419,14 +419,32 @@ h6 {
 
 p {
 	margin-bottom: 1.5em;
+	font-family: "Luxurious Roman", serif;
 }
+
+/* fonts used, commented but copy paste them when needed */
+
+/* .luxurious-roman-regular {
+	font-family: "Luxurious Roman", serif;
+	font-weight: 400;
+	font-style: normal;
+  } */
+  
+  /* .arvo-regular {
+	font-family: "Arvo", serif;
+	font-weight: 400;
+	font-style: normal;
+  } */
+  
 
 h2{
 	font-size: 2rem;
+	font-family: "Arvo", serif;
 }
 
 h1{
 	font-size: 3rem;
+	font-family: "Arvo", serif;
 }
 
 dfn,
