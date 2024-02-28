@@ -7,9 +7,9 @@
  * @package doubleAengraving
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( 'doubleaengravingVERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( 'doubleaengravingVERSION', '1.0.7' );
 }
 
 /**
@@ -45,6 +45,9 @@ function doubleaengraving_setup() {
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 	add_theme_support( 'post-thumbnails' );
+	//add image sizing
+	add_image_size( 'category-thumb', 250, 250, true);
+	add_image_size( 'front-thumb', 350, 350, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
@@ -99,8 +102,17 @@ function doubleaengraving_setup() {
 			'flex-height' => true,
 		)
 	);
+
+
+
+	
+
+
 }
 add_action( 'after_setup_theme', 'doubleaengraving_setup' );
+
+
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -114,34 +126,50 @@ function doubleaengraving_content_width() {
 }
 add_action( 'after_setup_theme', 'doubleaengraving_content_width', 0 );
 
+
+function wpdocs_excerpt_more( $more ) {
+	return sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
+		esc_url( get_permalink( get_the_ID() ) ),
+		sprintf( __( ' Read more! %s', 'doubleaengraving'), '<span class="screen-reader-text">'. '</span>')
+	);
+
+	return '...';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function doubleaengraving_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar', 'doubleaengraving' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'doubleaengraving' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-add_action( 'widgets_init', 'doubleaengraving_widgets_init' );
+// function doubleaengraving_widgets_init() {
+// 	register_sidebar(
+// 		array(
+// 			'name'          => esc_html__( 'Sidebar', 'doubleaengraving' ),
+// 			'id'            => 'sidebar-1',
+// 			'description'   => esc_html__( 'Add widgets here.', 'doubleaengraving' ),
+// 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+// 			'after_widget'  => '</section>',
+// 			'before_title'  => '<h2 class="widget-title">',
+// 			'after_title'   => '</h2>',
+// 		)
+// 	);
+// }
+// add_action( 'widgets_init', 'doubleaengraving_widgets_init' );
+
+
 
 /**
  * Enqueue scripts and styles.
  */
 function doubleaengraving_scripts() {
-	wp_enqueue_style( 'doubleaengraving-style', get_stylesheet_uri(), array(), _S_VERSION );
+	$stylesheet_uri = get_stylesheet_uri();
+	$stylesheet_path = get_template_directory() . '/style.css';
+	$stylesheet_version = filemtime($stylesheet_path);
+
+	wp_enqueue_style( 'doubleaengraving', $stylesheet_uri, array(), $stylesheet_version );
 	wp_style_add_data( 'doubleaengraving-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'doubleaengraving-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'doubleaengraving-navigation', get_template_directory_uri() . '/js/navigation.js', array(), doubleaengravingVERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

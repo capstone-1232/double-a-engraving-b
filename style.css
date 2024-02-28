@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.0.0
+Version: 1.0.5
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -93,8 +93,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+	/* font-size: 2em; */
+	/* margin: 0.67em 0; */
 }
 
 /* Grouping content
@@ -419,6 +419,32 @@ h6 {
 
 p {
 	margin-bottom: 1.5em;
+	font-family: "Luxurious Roman", serif;
+}
+
+/* fonts used, commented but copy paste them when needed */
+
+/* .luxurious-roman-regular {
+	font-family: "Luxurious Roman", serif;
+	font-weight: 400;
+	font-style: normal;
+  } */
+  
+  /* .arvo-regular {
+	font-family: "Arvo", serif;
+	font-weight: 400;
+	font-style: normal;
+  } */
+  
+
+h2{
+	font-size: 2rem;
+	font-family: "Arvo", serif;
+}
+
+h1{
+	font-size: 3rem;
+	font-family: "Arvo", serif;
 }
 
 dfn,
@@ -536,9 +562,7 @@ a {
 	color: #4169e1;
 }
 
-a:visited {
-	color: #800080;
-}
+
 
 a:hover,
 a:focus,
@@ -641,6 +665,13 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
+.menu li a{
+	font-size: 2rem
+}
+
+
+
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -651,6 +682,39 @@ textarea {
 	display: block;
 	width: 100%;
 }
+/* removes bootstrap built-in styling so only svg appears on hamburg icon */
+.navbar-toggler{
+	background-color: #3d4f08;
+	border: #3d4f08;
+}
+.navbar-toggler:focus{
+	box-shadow: none;
+}
+
+.offcanvas-body {
+	background-color: #3d4f08;
+}
+
+.offcanvas-header{
+	background-color: #3d4f08;
+	padding-top: 1rem;
+	padding-bottom: 0;
+	border-bottom: 1px solid white;
+
+}
+
+.offcanvas-header .btn-close {
+	color: #fff;
+	margin: 0;
+}
+
+/* removes the styling of the bootstrap close so only the SVG appears */
+.svg-close{
+	background: none;
+	background-color: none;
+	border: none;
+}
+
 
 .main-navigation ul {
 	display: none;
@@ -692,6 +756,8 @@ textarea {
 	position: relative;
 }
 
+
+
 .main-navigation a {
 	display: block;
 	text-decoration: none;
@@ -701,6 +767,7 @@ textarea {
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	background-color: #404040;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -838,6 +905,10 @@ textarea {
 	width: 100%;
 }
 
+.gallery-item img {
+
+}
+
 .gallery-columns-2 {
 	grid-template-columns: repeat(2, 1fr);
 }
@@ -846,9 +917,13 @@ textarea {
 	grid-template-columns: repeat(3, 1fr);
 }
 
-.gallery-columns-4 {
-	grid-template-columns: repeat(4, 1fr);
+@media screen and (min-width: 992px) {
+	
+	.gallery-columns-4 {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
+
 
 .gallery-columns-5 {
 	grid-template-columns: repeat(5, 1fr);
@@ -895,6 +970,12 @@ textarea {
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
+:root {
+  --main-color: #ff0000;
+  --chip-color: #3d4f08;
+}
+
+
 
 /* Accessibility
 --------------------------------------------- */
