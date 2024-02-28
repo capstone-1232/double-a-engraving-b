@@ -12,18 +12,19 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'doubleaengraving' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'doubleaengraving' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'doubleaengraving' ), 'doubleaengraving', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+		<div class="footercontainer container">
+			<h4> Capilano Mall - building with Albert’s Restaurant and TD Bank, 5004 98 Ave</h4>
+			<h4>Available Saturdays 9:30 AM - 3:00 PM</h4>
+			<h4>Cell:  780-220-9681</h4>
+
+			<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'footermenu',
+								'menu_id' => 'footer-menu',
+							)
+						);
+						?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
