@@ -83,7 +83,7 @@
 
 
 	</div>
-	<nav class="navbar navbar-expand-lg sticky-top">
+	<nav class="navbar navbar-expand-md sticky-top">
 		<div class="container-fluid">
 			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
 				aria-controls="offcanvas" aria-label="Toggle navigation">

@@ -447,6 +447,11 @@ h1{
 	font-family: "Arvo", serif;
 }
 
+h4{
+	font-size: 1.25rem;
+	font-family: "Arvo", serif;
+}
+
 dfn,
 cite,
 em,
@@ -666,7 +671,7 @@ textarea {
 --------------------------------------------------------------*/
 
 .menu li a{
-	font-size: 2rem
+	font-size: 1.5rem
 }
 
 
@@ -816,7 +821,7 @@ textarea {
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	/* margin: 0 0 1.5em; */
 }
 
 .updated:not(.published) {
@@ -972,8 +977,49 @@ textarea {
 --------------------------------------------------------------*/
 :root {
   --main-color: #ff0000;
-  --chip-color: #3d4f08;
+  --nav-color: #3d4f08;
+  --btn-color: #AE3602;
+  
+
 }
+
+.catbtn{
+	background-color: var(--btn-color);
+	color: white;
+	border: none;
+}
+
+.catbtn:hover{
+	background-color: #AE3602;
+	color: white;
+	border: none;
+}
+
+.catbtn:focus{
+	background-color: #AE3602;
+	color: white;
+	border: none;
+}
+
+.site-footer{
+	background-color: var(--nav-color);
+	color: white;
+	text-align: center;
+}
+
+#footer-menu li a{
+	font-size: 1.25rem;
+}
+
+.menu{
+	justify-content: center;
+}
+
+.footercontainer p{
+	margin: 0;
+}
+
+
 
 
 
