@@ -417,10 +417,6 @@ h6 {
 	clear: both;
 }
 
-p {
-	margin-bottom: 1.5em;
-	font-family: "Luxurious Roman", serif;
-}
 
 /* fonts used, commented but copy paste them when needed */
 
@@ -436,21 +432,6 @@ p {
 	font-style: normal;
   } */
   
-
-h2{
-	font-size: 2rem;
-	font-family: "Arvo", serif;
-}
-
-h1{
-	font-size: 3rem;
-	font-family: "Arvo", serif;
-}
-
-h4{
-	font-size: 1.25rem;
-	font-family: "Arvo", serif;
-}
 
 dfn,
 cite,
@@ -670,10 +651,6 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
-.menu li a{
-	font-size: 1.5rem
-}
-
 
 
 
@@ -687,38 +664,7 @@ textarea {
 	display: block;
 	width: 100%;
 }
-/* removes bootstrap built-in styling so only svg appears on hamburg icon */
-.navbar-toggler{
-	background-color: #3d4f08;
-	border: #3d4f08;
-}
-.navbar-toggler:focus{
-	box-shadow: none;
-}
 
-.offcanvas-body {
-	background-color: #3d4f08;
-}
-
-.offcanvas-header{
-	background-color: #3d4f08;
-	padding-top: 1rem;
-	padding-bottom: 0;
-	border-bottom: 1px solid white;
-
-}
-
-.offcanvas-header .btn-close {
-	color: #fff;
-	margin: 0;
-}
-
-/* removes the styling of the bootstrap close so only the SVG appears */
-.svg-close{
-	background: none;
-	background-color: none;
-	border: none;
-}
 
 
 .main-navigation ul {
@@ -975,52 +921,6 @@ textarea {
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
-:root {
-  --main-color: #ff0000;
-  --nav-color: #3d4f08;
-  --btn-color: #AE3602;
-  
-
-}
-
-.catbtn{
-	background-color: var(--btn-color);
-	color: white;
-	border: none;
-}
-
-.catbtn:hover{
-	background-color: #AE3602;
-	color: white;
-	border: none;
-}
-
-.catbtn:focus{
-	background-color: #AE3602;
-	color: white;
-	border: none;
-}
-
-.site-footer{
-	background-color: var(--nav-color);
-	color: white;
-	text-align: center;
-}
-
-#footer-menu li a{
-	font-size: 1.25rem;
-}
-
-.menu{
-	justify-content: center;
-}
-
-.footercontainer p{
-	margin: 0;
-}
-
-
-
 
 
 /* Accessibility
@@ -1094,3 +994,144 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
+
+/* Newly Added CSS Section - The rest of the CSS is
+defaults that came with Underscore. anything from
+this point on is added by Jerry or Benisha.
+--------------------------------------------- */
+
+/* color variables, temporary names not final */
+:root {
+	--main-color: #ff0000;
+	--nav-color: #3d4f08;
+	--btn-color: #AE3602;
+
+  }
+  
+
+/* Typography 
+--------------------------------------------- */
+
+/* fonts used, commented but copy paste them when needed */
+
+/* .luxurious-roman-regular {
+	font-family: "Luxurious Roman", serif;
+	font-weight: 400;
+	font-style: normal;
+  } */
+  
+  /* .arvo-regular {
+	font-family: "Arvo", serif;
+	font-weight: 400;
+	font-style: normal;
+  } */
+
+p {
+	margin-bottom: 1.5em;
+	font-family: "Luxurious Roman", serif;
+}
+
+h2{
+	font-size: 2rem;
+	font-family: "Arvo", serif;
+}
+
+h1{
+	font-size: 3rem;
+	font-family: "Arvo", serif;
+}
+
+h4{
+	font-size: 1.25rem;
+	font-family: "Arvo", serif;
+}
+
+/* Layouts
+--------------------------------------------- */
+.menu li a{
+	font-size: 1.5rem
+}
+
+.menu{
+	justify-content: center;
+}
+
+/* Navigation
+--------------------------------------------- */
+/* removes bootstrap built-in styling so only svg appears on hamburg icon */
+.navbar-toggler{
+	background-color: #3d4f08;
+	border: #3d4f08;
+}
+.navbar-toggler:focus{
+	box-shadow: none;
+}
+
+.offcanvas-body {
+	background-color: #3d4f08;
+}
+
+.offcanvas-header{
+	background-color: #3d4f08;
+	padding-top: 1rem;
+	padding-bottom: 0;
+	border-bottom: 1px solid white;
+
+}
+
+.offcanvas-header .btn-close {
+	color: #fff;
+	margin: 0;
+}
+
+/* removes the styling of the bootstrap close so only the SVG appears */
+.svg-close{
+	background: none;
+	background-color: none;
+	border: none;
+}
+
+/* Buttons
+--------------------------------------------- */
+/* catbtn is a temporary name, but it's to overrwrite bootstrap button color for the button */
+
+.catbtn{
+	background-color: var(--btn-color);
+	color: white;
+	border: none;
+}
+
+.catbtn:hover{
+	background-color: #AE3602;
+	color: white;
+	border: none;
+}
+
+.catbtn:focus{
+	background-color: #AE3602;
+	color: white;
+	border: none;
+}
+
+/* Footer
+--------------------------------------------- */
+.site-footer{
+	background-color: var(--nav-color);
+	color: white;
+	text-align: center;
+}
+
+#footer-menu li a{
+	font-size: 1.25rem;
+}
+
+/* footercontainer is a class to diffrentiate from bootstraps
+container class and allow edits to the footer instead
+container as a whole */
+.footercontainer p{
+	margin: 0;
+}
+
+
+
+
