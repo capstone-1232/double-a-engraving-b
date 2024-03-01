@@ -41,6 +41,8 @@ get_header();
             a range of materials. Click the button to view more categories.
         </p>
 
+        <!-- when CSS is implemented, this will display images at 2x2 on mobile screens
+        then 4x4 on larger screens -->
         <div class="gallery gallery-columns-2 gallery-columns-4">
             <?php
             $args = array(
@@ -63,7 +65,7 @@ get_header();
         </div>
 
         <div class="d-grid col-6 mx-auto col-lg-4">
-            <button class="catbtn btn btn-primary mb-4 justify-content-md-center" type="button">View Catalog</button>
+            <button class=" btn btn-primary mb-4 justify-content-md-center" type="button">View Catalog</button>
         </div>
     </section>
     <!-- end of catalog section -->
@@ -73,7 +75,7 @@ get_header();
         <h2> Testimonials</h2>
 
         <div class="row">
-            <div class="col-md-6 py-3">
+            <div class="col-md-3 py-3">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">"I love my new engraved cutting board!"</h5>
@@ -127,12 +129,6 @@ get_header();
             Use the google maps below to get directions if needed.
         </p>
 
-        <div class="d-flex justify-content-center">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2370.073073073073!2d-113.437
-            07307307307!3d53.52607307307307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a022f
-            0d" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-
     </section>
 
     <!-- end of location section -->
@@ -140,8 +136,8 @@ get_header();
     <!-- tagline section -->
     <section class="container-md py-3">
         
-        <h2> If you imagine it, I create it. </h2>
-        <div class="d-grid col-lg-4 py-3">
+        <h2 class="text-center"> If you imagine it, I create it. </h2>
+        <div class="d-grid col-6 mx-auto col-lg-4">
 
             <button class="catbtn btn btn-primary mb-4 justify-content-md-center" type="button"> Make a Request </button>
         </div>

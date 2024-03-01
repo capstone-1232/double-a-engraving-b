@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.0.5
+Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -93,8 +93,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-	/* font-size: 2em; */
-	/* margin: 0.67em 0; */
+	font-size: 2em;
+	margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -417,21 +417,9 @@ h6 {
 	clear: both;
 }
 
-
-/* fonts used, commented but copy paste them when needed */
-
-/* .luxurious-roman-regular {
-	font-family: "Luxurious Roman", serif;
-	font-weight: 400;
-	font-style: normal;
-  } */
-  
-  /* .arvo-regular {
-	font-family: "Arvo", serif;
-	font-weight: 400;
-	font-style: normal;
-  } */
-  
+p {
+	margin-bottom: 1.5em;
+}
 
 dfn,
 cite,
@@ -496,7 +484,7 @@ hr {
 
 ul,
 ol {
-	/* margin: 0 0 1.5em 3em; */
+	margin: 0 0 1.5em 3em;
 }
 
 ul {
@@ -548,7 +536,9 @@ a {
 	color: #4169e1;
 }
 
-
+a:visited {
+	color: #800080;
+}
 
 a:hover,
 a:focus,
@@ -651,9 +641,6 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
-
-
-
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -664,8 +651,6 @@ textarea {
 	display: block;
 	width: 100%;
 }
-
-
 
 .main-navigation ul {
 	display: none;
@@ -707,8 +692,6 @@ textarea {
 	position: relative;
 }
 
-
-
 .main-navigation a {
 	display: block;
 	text-decoration: none;
@@ -718,7 +701,6 @@ textarea {
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
-	background-color: #404040;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -767,7 +749,7 @@ textarea {
 
 .post,
 .page {
-	/* margin: 0 0 1.5em; */
+	margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {
@@ -848,17 +830,12 @@ textarea {
 	margin-bottom: 1.5em;
 	display: grid;
 	grid-gap: 1.5em;
-	justify-items: center;
 }
 
 .gallery-item {
 	display: inline-block;
 	text-align: center;
 	width: 100%;
-}
-
-.gallery-item img {
-
 }
 
 .gallery-columns-2 {
@@ -869,13 +846,9 @@ textarea {
 	grid-template-columns: repeat(3, 1fr);
 }
 
-@media screen and (min-width: 992px) {
-	
-	.gallery-columns-4 {
-		grid-template-columns: repeat(4, 1fr);
-	}
+.gallery-columns-4 {
+	grid-template-columns: repeat(4, 1fr);
 }
-
 
 .gallery-columns-5 {
 	grid-template-columns: repeat(5, 1fr);
@@ -922,7 +895,6 @@ textarea {
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
-
 
 /* Accessibility
 --------------------------------------------- */
@@ -995,185 +967,3 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
-
-/* Newly Added CSS Section - The rest of the CSS is
-defaults that came with Underscore. anything from
-this point on is added by Jerry or Benisha.
---------------------------------------------- */
-
-/* color variables, temporary names not final */
-:root {
-	--main-color: #ff0000;
-	--nav-color: #3d4f08;
-	--btn-color: #AE3602;
-
-  }
-  
-
-/* Typography 
---------------------------------------------- */
-
-/* fonts used, commented but copy paste them when needed */
-
-/* .luxurious-roman-regular {
-	font-family: "Luxurious Roman", serif;
-	font-weight: 400;
-	font-style: normal;
-  } */
-  
-  /* .arvo-regular {
-	font-family: "Arvo", serif;
-	font-weight: 400;
-	font-style: normal;
-  } */
-
-p {
-	margin-bottom: 1.5em;
-	font-family: "Luxurious Roman", serif;
-}
-
-h2{
-	font-size: 2rem;
-	font-family: "Arvo", serif;
-}
-
-h1{
-	font-size: 3rem;
-	font-family: "Arvo", serif;
-}
-
-h4{
-	font-size: 1.25rem;
-	font-family: "Arvo", serif;
-}
-
-a:visited {
-	color: none;
-}
-
-/* Layouts
---------------------------------------------- */
-.menu li a{
-	font-size: 1.5rem
-}
-
-.menu{
-	justify-content: flex-start;
-	list-style: none;
-	margin: 0;
-	flex-direction: row;
-	padding: 0;
-}
-
-.nav-link {
-
-	padding: 10px;
-	color: white;
-	border-right: none;
-}
-
-
-
-/* Navigation
---------------------------------------------- */
-/* removes bootstrap built-in styling so only svg appears on hamburg icon */
-.navbar-toggler{
-	background-color: #3d4f08;
-	border: #3d4f08;
-}
-.navbar-toggler:focus{
-	box-shadow: none;
-}
-
-.offcanvas-body {
-	background-color: #3d4f08;
-}
-
-.offcanvas-header{
-	background-color: #3d4f08;
-	padding-top: 1rem;
-	padding-bottom: 0;
-	border-bottom: 1px solid white;
-
-}
-
-.offcanvas-header .btn-close {
-	color: #fff;
-	margin: 0;
-}
-
-/* removes the styling of the bootstrap close so only the SVG appears */
-.svg-close{
-	background: none;
-	background-color: none;
-	border: none;
-}
-
-.navbar {
-	background-color: #3d4f08;
-}
-
-@media screen and (min-width: 768px) {
-	.menu,
-	.menu-footermenu-container .footermenu {
-		display: flex;
-		flex-direction: column;
-	}
-
-	
-}
-
-
-.menu,
-.footermenu{
-	flex-direction: row;
-}
-
-.navbar-nav{
-	font-size: 1.5rem;
-}
-
-/* Buttons
---------------------------------------------- */
-/* catbtn is a temporary name, but it's to overrwrite bootstrap button color for the button */
-
-.catbtn{
-	background-color: var(--btn-color);
-	color: white;
-	border: none;
-}
-
-.catbtn:hover{
-	background-color: #AE3602;
-	color: white;
-	border: none;
-}
-
-.catbtn:focus{
-	background-color: #AE3602;
-	color: white;
-	border: none;
-}
-
-/* Footer
---------------------------------------------- */
-.site-footer{
-	background-color: var(--nav-color);
-	color: white;
-	text-align: center;
-}
-
-#footer-menu li a{
-	font-size: 1.5rem;
-}
-
-/* footercontainer is a class to diffrentiate from bootstraps
-container class and allow edits to the footer instead
-container as a whole */
-.footercontainer p{
-	margin: 0;
-}
-
-
-
-
