@@ -496,7 +496,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	/* margin: 0 0 1.5em 3em; */
 }
 
 ul {
@@ -1047,6 +1047,10 @@ h4{
 	font-family: "Arvo", serif;
 }
 
+a:visited {
+	color: none;
+}
+
 /* Layouts
 --------------------------------------------- */
 .menu li a{
@@ -1055,7 +1059,20 @@ h4{
 
 .menu{
 	justify-content: flex-start;
+	list-style: none;
+	margin: 0;
+	flex-direction: row;
+	padding: 0;
 }
+
+.nav-link {
+
+	padding: 10px;
+	color: white;
+	border-right: none;
+}
+
+
 
 /* Navigation
 --------------------------------------------- */
@@ -1090,6 +1107,30 @@ h4{
 	background: none;
 	background-color: none;
 	border: none;
+}
+
+.navbar {
+	background-color: #3d4f08;
+}
+
+@media screen and (min-width: 768px) {
+	.menu,
+	.menu-footermenu-container .footermenu {
+		display: flex;
+		flex-direction: column;
+	}
+
+	
+}
+
+
+.menu,
+.footermenu{
+	flex-direction: row;
+}
+
+.navbar-nav{
+	font-size: 1.5rem;
 }
 
 /* Buttons
