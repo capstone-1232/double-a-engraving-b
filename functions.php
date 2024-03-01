@@ -46,8 +46,9 @@ function doubleaengraving_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 	//add image sizing
+
 	add_image_size( 'category-thumb', 250, 250, true);
-	add_image_size( 'front-thumb', 350, 350, true);
+	add_image_size( 'front-thumb', 350, 350, true); // these are placeholder sizes.
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(

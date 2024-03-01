@@ -12,7 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="footercontainer container">
+		<div class="footercontainer container pt-3">
 			<h4> Capilano Mall - building with Albert’s Restaurant and TD Bank, 5004 98 Ave</h4>
 			<h4>Available Saturdays 9:30 AM - 3:00 PM</h4>
 			<h4>Cell:  780-220-9681</h4>

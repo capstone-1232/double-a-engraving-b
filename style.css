@@ -848,6 +848,7 @@ textarea {
 	margin-bottom: 1.5em;
 	display: grid;
 	grid-gap: 1.5em;
+	justify-items: center;
 }
 
 .gallery-item {
@@ -1053,7 +1054,7 @@ h4{
 }
 
 .menu{
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 /* Navigation
@@ -1122,7 +1123,7 @@ h4{
 }
 
 #footer-menu li a{
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 /* footercontainer is a class to diffrentiate from bootstraps
