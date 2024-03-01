@@ -27,47 +27,7 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Luxurious+Roman&display=swap"
 		rel="stylesheet">
-	<style>
-		.navbar {
-			background-color: #3d4f08;
-		}
 
-		@media screen and (min-width: 768px) {
-			.menu {
-				display: flex;
-				flex-direction: column;
-			}
-
-
-
-			.navbar-nav .nav-link {
-				border-right: 1px solid #fff;
-			}
-
-		}
-
-		.menu li {
-
-			padding: 10px;
-		}
-
-		.menu {
-			list-style: none;
-			margin: 0;
-			flex-direction: row;
-			padding: 0;
-
-		}
-
-		li a {
-			text-decoration: none;
-			color: white;
-		}
-
-		a:visited {
-			color: none;
-		}
-	</style>
 
 
 	<?php wp_head(); ?>
@@ -83,7 +43,7 @@
 
 
 	</div>
-	<nav class="navbar navbar-expand-md sticky-top">
+	<nav class="navbar navbar-expand-lg sticky-top">
 		<div class="container-fluid">
 			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
 				aria-controls="offcanvas" aria-label="Toggle navigation">
@@ -111,12 +71,13 @@
 
 
 						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'menu-1',
-								'menu_id' => 'primary-menu',
-							)
-						);
+							wp_nav_menu( array(
+							'theme_location'  => 'menu-1',
+							'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+							'menu_class'      => 'navbar-nav',
+							'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+							'walker'          => new WP_Bootstrap_Navwalker(),
+						) );
 						?>
 
 					</div>
