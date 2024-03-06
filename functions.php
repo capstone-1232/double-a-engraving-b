@@ -53,7 +53,7 @@ function doubleaengraving_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'doubleaengraving' ),
+			'headermenu' => esc_html__( 'Primary', 'doubleaengraving' ),
 			'footermenu' => esc_html__( 'Footer', 'doubleaengraving' ),
 		)
 	);

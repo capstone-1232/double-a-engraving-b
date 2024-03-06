@@ -103,8 +103,6 @@ get_header();
             ?>
 
 
-
-
         </div>
         <p>I am Allan Anderson, I have been laser engraving since 2022. I work out of my home and sell products at
             various farmers markets around Edmonton. It started as a hobby first but after retiring, I turned it into a
