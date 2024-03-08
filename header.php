@@ -81,7 +81,8 @@
 									'theme_location' => 'headermenu',
 									'menu_id' => 'headermenu',
 
-								));
+								)
+							);
 
 							// wp_nav_menu( array(
 							// 	'theme_location'  => 'menu-1',
@@ -96,6 +97,6 @@
 
 					</div>
 		</nav>
-	
-	<!-- #site-navigation -->
-	</header><!-- #masthead -->
+
+		<!-- #site-navigation -->
+		</header><!-- #masthead -->

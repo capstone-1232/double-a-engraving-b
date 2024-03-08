@@ -20,7 +20,8 @@ get_header();
     <div class="container-md">
 
         <h1 class="text-white pt-4">Double-A Engraving</h1>
-        <h5 class="text-white py-3 text-wrap" > Offering affordable, custom laser engravings on a variety of materials. If you
+        <h5 class="text-white py-3 text-wrap"> Offering affordable, custom laser engravings on a variety of materials.
+            If you
             imagine it, I create it.</h5>
 
         <div class="d-grid col-lg-4">
@@ -133,11 +134,12 @@ get_header();
 
     <!-- tagline section -->
     <section class="container-md py-3">
-        
+
         <h2 class="text-center"> If you imagine it, I create it. </h2>
         <div class="d-grid col-6 mx-auto col-lg-4">
 
-            <button class="catbtn btn btn-primary mb-4 justify-content-md-center" type="button"> Make a Request </button>
+            <button class="catbtn btn btn-primary mb-4 justify-content-md-center" type="button"> Make a Request
+            </button>
         </div>
 
     </section>
