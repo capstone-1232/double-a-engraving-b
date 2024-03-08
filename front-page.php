@@ -86,7 +86,7 @@ get_header();
         </div>
 
         <div class="d-grid col-6 mx-auto col-lg-4">
-            <button class="catbtn btn btn-primary mb-4 justify-content-md-center" type="button">View Testimonials
+            <button class="btn btn-primary mb-4 justify-content-md-center" type="button">View Testimonials
             </button>
 
     </section>
@@ -108,7 +108,7 @@ get_header();
             various farmers markets around Edmonton. It started as a hobby first but after retiring, I turned it into a
             business and it has been awesome.</p>
         <div class="d-grid col-6 mx-auto col-lg-4">
-            <button class="catbtn btn
+            <button class=" btn
             btn-primary mb-4 justify-content-md-center" type="button"> More About Me
             </button>
         </div>
