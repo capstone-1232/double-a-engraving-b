@@ -164,6 +164,7 @@ add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
  * Enqueue scripts and styles.
  */
 function doubleaengraving_scripts() {
+	// this code is so that the theme can be updated without having to change the version number in the stylesheet.
 	$stylesheet_uri = get_stylesheet_uri();
 	$stylesheet_path = get_template_directory() . '/style.css';
 	$stylesheet_version = filemtime($stylesheet_path);
@@ -234,3 +235,5 @@ function prefix_bs5_dropdown_data_attribute( $atts, $item, $args ) {
     }
     return $atts;
 }
+
+// register custom post types

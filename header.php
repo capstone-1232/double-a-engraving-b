@@ -50,52 +50,30 @@
 		</a>
 
 
-		<nav class="navbar navbar-expand-lg bg-body-dark sticky-top">
-			<div class="container-fluid bg-dark">
-				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
-					aria-controls="offcanvas" aria-label="Toggle navigation">
-					<!-- Menu Icon -->
-					<svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="white" width="35" height="35"
-						viewBox="0 0 21 18">
-						<path id="hamburger_icon" data-name="hamburger icon"
-							d="M4.5,27h21V24H4.5Zm0-7.5h21v-3H4.5ZM4.5,9v3h21V9Z" transform="translate(-4.5 -9)" />
-					</svg>
-				</button>
-				<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas"
-					aria-labelledby="offcanvasLabel">
-					<div class="offcanvas-header">
-						<button type="button" class="svg-close" data-bs-dismiss="offcanvas" aria-label="Close">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="white" width="35" height="35"
-								viewBox="0 0 1024 1024">
-								<path
-									d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z" />
-							</svg>
-						</button>
-					</div>
-					<div class="offcanvas-body">
-						<div class="container">
+		<nav>
+			<div>
 
-							<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'headermenu',
-									'menu_id' => 'headermenu',
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'headermenu',
+						'menu_id' => 'headermenu',
 
-								)
-							);
+					)
+				);
 
-							// wp_nav_menu( array(
-							// 	'theme_location'  => 'menu-1',
-							// 	'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
-							// 	'menu_class'      => 'navbar-nav',
-							// 	'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-							// 	'walker'          => new WP_Bootstrap_Navwalker(),
-							// this is to utilize bootstrap navwalker to allow submenus to be clicked
-							?>
+				// wp_nav_menu( array(
+				// 	'theme_location'  => 'menu-1',
+				// 	'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+				// 	'menu_class'      => 'navbar-nav',
+				// 	'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+				// 	'walker'          => new WP_Bootstrap_Navwalker(),
+				// this is to utilize bootstrap navwalker to allow submenus to be clicked
+				?>
 
-						</div>
+			</div>
 
-					</div>
+
 		</nav>
 
 		<!-- #site-navigation -->
