@@ -108,9 +108,8 @@ get_header();
         <p>I am Allan Anderson, I have been laser engraving since 2022. I work out of my home and sell products at
             various farmers markets around Edmonton. It started as a hobby first but after retiring, I turned it into a
             business and it has been awesome.</p>
-        <div class="d-grid col-6 mx-auto col-lg-4">
-            <button class=" btn
-            btn-primary mb-4 justify-content-md-center" type="button"> More About Me
+        <div>
+            <button type="button"> More About Me
             </button>
         </div>
 
