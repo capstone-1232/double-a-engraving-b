@@ -74,35 +74,35 @@ get_header();
     <!-- testimonials section  -->
     <section class="py-3">
         <h2> Testimonials</h2>
-
-        <div class="row">
-            <div class="col-md-3 py-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">"I love my new engraved cutting board!"</h5>
-                        <p class="card-text">- Jane Doe</p>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <?php
+            $args = array(
+                'post_type' => 'customer-testimonial',
+                'posts_per_page' => -1,
+            );
+            $loop = new WP_Query($args);
+            while ($loop->have_posts()) {
+                $loop->the_post();
+                get_template_part('template-parts/content', 'testimonials');
+                ?>
+                <?php
+            }
+            ?>
         </div>
 
-        <div class="d-grid col-6 mx-auto col-lg-4">
-            <button class="btn btn-primary mb-4 justify-content-md-center" type="button">View Testimonials
+
+        <div class="">
+            <button class="" type="button">View Testimonials
             </button>
 
     </section>
     <!-- end of testimonials section -->
 
     <!-- about me section -->
-    <section class="py-3 px-3">
+    <section class="">
         <h2> About Me</h2>
-        <div class="d-flex justify-content-center">
-
-
-            <?php
-            echo wp_get_attachment_image('https://karikarij.com/wordpress/wp-content/uploads/2024/02/elementor-placeholder-image.webp', 'front-thumb');
-            ?>
-
+        <div class="">
+            <img src="https://via.placeholder.com/150" alt="Allan Anderson">
 
         </div>
         <p>I am Allan Anderson, I have been laser engraving since 2022. I work out of my home and sell products at
@@ -118,7 +118,7 @@ get_header();
     <!-- end of about me section -->
 
     <!-- location section -->
-    <section class=" py-3 px-3">
+    <section class="">
         <h2>Location</h2>
 
         <p>
@@ -132,12 +132,12 @@ get_header();
     <!-- end of location section -->
 
     <!-- tagline section -->
-    <section class="container-md py-3">
+    <section class="">
 
-        <h2 class="text-center"> If you imagine it, I create it. </h2>
-        <div class="d-grid col-6 mx-auto col-lg-4">
+        <h2 class=""> If you imagine it, I create it. </h2>
+        <div class="">
 
-            <button class="catbtn btn btn-primary mb-4 justify-content-md-center" type="button"> Make a Request
+            <button class="" type="button"> Make a Request
             </button>
         </div>
 
