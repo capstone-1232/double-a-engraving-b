@@ -39,42 +39,40 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+	this implements some hidden SEO - the user is only going to see the logo, but there is text in the background
 	<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
 			<?php bloginfo('name'); ?>
-		</a> </h1>
+		</a></h1>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary">
 			<?php esc_html_e('Skip to content', 'doubleaengraving'); ?>
 		</a>
 
-
-		<nav>
-			<div>
-
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'headermenu',
-						'menu_id' => 'headermenu',
-
-					)
-				);
-
-				// wp_nav_menu( array(
-				// 	'theme_location'  => 'menu-1',
-				// 	'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
-				// 	'menu_class'      => 'navbar-nav',
-				// 	'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-				// 	'walker'          => new WP_Bootstrap_Navwalker(),
-				// this is to utilize bootstrap navwalker to allow submenus to be clicked
-				?>
-
+		<header id="masthead" class="site-header">
+			<div class="header-container">
+				<nav id="site-navigation" class="main-navigation">
+					<div class="mobile-menu-container">
+						<!-- site branding aka custom logo -->
+						<div class="site-branding">
+							<h2 class="site-title">Main Navigation</h2>
+							<?php
+							the_custom_logo();
+							?>
+						</div>
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"
+							aria-label="Toggle menu">
+						</button>
+					</div>
+					<!-- Nav Menu  -->
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'headermenu',
+							'menu_id' => 'headermenu',
+						)
+					);
+					?>
+				</nav><!-- #site-navigation -->
 			</div>
-
-
-		</nav>
-
-		<!-- #site-navigation -->
 		</header><!-- #masthead -->
