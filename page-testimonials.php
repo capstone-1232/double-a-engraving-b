@@ -20,7 +20,7 @@ get_header();
     <section class="container-fluid">
         <article>
             <h2>Testimonials</h2>
-            <p>Read what our customers have to say about our products and services.</p>
+            <p>Read what our customers say about our products and services.</p>
             <div class="testimonial-gallery">
                 <?php
                 // this loop will display the testimonials, see the template-part for more

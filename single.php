@@ -11,30 +11,28 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<section>
+			<h1>Product Details</h1>
+			
+				<?php
+				while ( have_posts() ) :
+					the_post();
+					echo '<h2><a href="' . esc_url(get_permalink()) . '">' . get_the_title() . '</a></h2>';
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+					get_template_part( 'template-parts/content', get_post_type() );
+			
+				endwhile; // End of the loop.
+				?>
+			<div>
+				<button>Back to Catalog</button>
+				<button>Request Similar</button>
 
-			get_template_part( 'template-parts/content', get_post_type() );
+			</div>
+		</section>
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'doubleaengraving' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'doubleaengraving' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

@@ -36,8 +36,7 @@ get_header();
 
     <h2> Various Engraved Products</h2>
     <p>Browse the category of our products in the catalog. Click any of category images to be taken to the page for
-        those
-        products.</p>
+        those products.</p>
 
     <!-- Catalog section -->
     <!-- the gallery class will use breakpoints to display 2x2 on mobile and 4x4 on larger screens -->
