@@ -182,15 +182,9 @@ function doubleaengraving_widgets_init()
 
 	register_sidebar(
 		array(
-<<<<<<< Updated upstream
-			'name' => 'Write Review',
-			'id' => 'review_form',
-			'description' => 'This widget contains the form to write a review..',
-=======
 			'name' => 'Review Form',
 			'id' => 'review_form',
 			'description' => 'This widget contains the form for the users to write a review.',
->>>>>>> Stashed changes
 			'before_widget' => '<section class="review-form">',
 			'after_widget' => '</section>',
 			'before_title' => '<h3>',
