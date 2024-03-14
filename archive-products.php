@@ -40,6 +40,9 @@ get_header();
                 ?>  
         </div>
     </section>
+    <div class="catalogbtn">
+        <button>Back to Catalog</button>
+    </div>
 
 
 

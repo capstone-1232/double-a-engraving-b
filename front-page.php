@@ -45,22 +45,26 @@ get_header();
         then 4x4 on larger screens -->
         <div class="gallery gallery-columns-2 gallery-columns-4">
             <?php
-            $args = array(
-                'post_type' => 'lp-images',
-                'posts_per_page' => -1,
-            );
-            $loop = new WP_Query($args);
-            while ($loop->have_posts()) {
-                $loop->the_post();
-                $image = get_field('landing_page_images');
-                $size = 'category-thumb'; // category thumb is a custom image size
-                if ($image) {
-                    echo wp_get_attachment_image($image, $size);
-                }
-                ?>
-                <?php
-            }
+            $categories = get_categories(array('number' => 4)); // Get up to 4 categories
 
+            // Randomize the order of categories, uncomment if desired
+            // shuffle($categories);
+
+            foreach ($categories as $category) {
+                // this gets the first product from each category and will use it for the landing page
+                // this is also limited to only showing 4 category/products.
+                $args = array(
+                    'post_type' => 'products',
+                    'posts_per_page' => 1,
+                    'category_name' => $category->name,
+                );
+                $loop = new WP_Query($args);
+                if ($loop->have_posts()) {
+                    $loop->the_post();
+                    get_template_part('template-parts/content', 'catalog');
+                   
+                }
+            }
             ?>
         </div>
 
