@@ -43,19 +43,17 @@ get_header();
     <!-- the gallery class will use breakpoints to display 2x2 on mobile and 4x4 on larger screens -->
     <article class="gallery gallery-columns-2 gallery-columns-4">
         <?php
-        // this loop will display the product categories, see the template-part for more
-        $args = array(
-            'post_type' => 'product-category',
-            'posts_per_page' => -1,
-        );
-        $loop = new WP_Query($args);
-        while ($loop->have_posts()) {
-            $loop->the_post();
-            get_template_part('template-parts/content', 'catalog');
-            ?>
-            <?php
-        }
+            $categories = get_categories();
 
+            echo '<div class="gallery-placeholder">';
+            foreach ($categories as $category) {
+                $category_link = get_category_link($category->term_id);
+                echo '<a href="' . esc_url($category_link) . '" title="' . $category->name . '">';
+                echo '<h2>' . $category->name . '</h2>';
+                echo '</a>';
+            }
+            echo '</div>';
+            
 
 
         ?>

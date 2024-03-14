@@ -2,10 +2,12 @@
     <!-- create a container/card for the category image -->
     <?php
     // gets the featured image for the category, this will display on the catalog
-    $image = get_field('category_featured_image');
+    $image = get_field('product_image');
     $size = 'category-thumb';
     if ($image) {
-        echo wp_get_attachment_image($image, $size);
+        $image_url = wp_get_attachment_image_url($image, $size);
+        $category_link = get_permalink(); // Assuming the image links to the current category page
+        echo '<a href="' . $category_link . '"><img src="' . $image_url . '" alt="Category Image"></a>';
     }
     ?>
     <div class="category-title">

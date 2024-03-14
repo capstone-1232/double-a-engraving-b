@@ -171,6 +171,18 @@ function doubleaengraving_widgets_init()
 			'after_title' => '</h3>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name' => 'Write Review',
+			'id' => 'review_form',
+			'description' => 'This widget contains the form to write a review..',
+			'before_widget' => '<section class="review-form">',
+			'after_widget' => '</section>',
+			'before_title' => '<h3>',
+			'after_title' => '</h3>',
+		)
+	);
 }
 add_action('widgets_init', 'doubleaengraving_widgets_init');
 
@@ -225,4 +237,34 @@ require get_template_directory() . '/inc/customizer.php';
 if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+//Create extra fields called Altnative Text and Status
+function my_extra_gallery_fields( $args, $attachment_id, $field ){
+    $args['alt'] = array(
+        'type' => 'text', 
+        'label' => 'Altnative Text', 
+        'name' => 'alt', 
+        'value' => get_field($field . '_alt', $attachment_id)
+    );
+    $args['status'] = array(
+        'type' => 'select', 
+        'label' => 'Status', 
+        'name' => 'status', 
+        'value' => array(
+            array(
+                '1' => 'Active',
+                 '2' => 'Inactive'
+            ), 
+            get_field($field . '_status', $attachment_id)
+        )
+    );
+    return $args;
+}
+add_filter( 'acf_photo_gallery_image_fields', 'my_extra_gallery_fields', 10, 3 );
+
+// add re-write rules to make a product details page
+// function pce_rewrite_rules ( ) {
+// 	add_rewrite_rule ( '^class/([^/]*)/([^/]*)/([^/]*)/?', 'index.php?post_type=section&catalog_name=$matches[1]&course_name=$matches[2]&section_no=$matches[3]','top' ) ;
+//   add_action ( 'init', 'pce_rewrite_rules', 10, 0 ) ;
+// }
 

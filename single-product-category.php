@@ -42,12 +42,19 @@ get_header();
                 $full_image_url = $image['full_image_url']; // receives full image URL
                 $thumbnail_image_url = $image['thumbnail_image_url']; // gets a thumbnail image
                 $thumbnail_image_url = acf_photo_gallery_resize_image($thumbnail_image_url, 250, 250); // resizes the image to 250x250, this can only be customized in the backend
+
+                // Get the URL of the product category
+                $category_url = get_permalink();
+
+                // Generate the URL for the image's own page
+                $image_page_url = $category_url . '?image_id=' . $id;
+
                 ?>
 
                 <div class="gallery-placeholder">
-                    <!-- when the image is clicked, this will direct the user to the full sized image -->
-                    <a href="<?php echo $full_image_url; ?>">
-                        <img src="<?php echo $thumbnail_image_url; ?>" alt="<?php echo $title; ?>">
+                    <!-- when the image is clicked, this will direct the user to the image's own page -->
+                    <a href="<?php echo $image_page_url; ?>">
+                        <img src="<?php echo $thumbnail_image_url; ?>" alt="<?php echo $title; ?> ">
                     </a>
                 </div>
 
