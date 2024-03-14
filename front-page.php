@@ -21,8 +21,7 @@ get_header();
 
         <h1 class="text-white pt-4">Double-A Engraving</h1>
         <h5 class="text-white py-3 text-wrap"> Offering affordable, custom laser engravings on a variety of materials.
-            If you
-            imagine it, I create it.</h5>
+            If you imagine it, I create it.</h5>
 
         <div class="d-grid col-lg-4">
 
@@ -123,8 +122,8 @@ get_header();
 
         <p>
             To meet in person or buy any products, come over to <u> Capilano Mall, 5004 98 Ave Edmonton </u>.
-            I am available on Saturdays from 9:30 AM - 3:00 PM. You can also reach me at <u>780-220-9681. </u>
-            Use the google maps below to get directions if needed.
+            I am available on Saturdays from 9:30 AM - 3:00 PM. You can also reach out to me at <u>780-220-9681. </u>
+            Use the google maps below to get accurate location details.
         </p>
 
     </section>
@@ -142,12 +141,6 @@ get_header();
         </div>
 
     </section>
-
-
-
-
-
-
 </main><!-- #main -->
 
 <?php

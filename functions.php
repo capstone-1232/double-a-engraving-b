@@ -89,6 +89,14 @@ function doubleaengraving_setup()
 		)
 	);
 
+// Add featured image on categories option
+	add_action( 'init', 'theme_custom_taxonomy_image' );
+		function theme_custom_taxonomy_image() {
+    		if ( function_exists( 'register_taxonomy_for_object_type' ) ) {
+        register_taxonomy_for_object_type( 'category', 'post' );
+    	}
+}
+
 	// Add theme support for selective refresh for widgets.
 	add_theme_support('customize-selective-refresh-widgets');
 
@@ -174,9 +182,15 @@ function doubleaengraving_widgets_init()
 
 	register_sidebar(
 		array(
+<<<<<<< Updated upstream
 			'name' => 'Write Review',
 			'id' => 'review_form',
 			'description' => 'This widget contains the form to write a review..',
+=======
+			'name' => 'Review Form',
+			'id' => 'review_form',
+			'description' => 'This widget contains the form for the users to write a review.',
+>>>>>>> Stashed changes
 			'before_widget' => '<section class="review-form">',
 			'after_widget' => '</section>',
 			'before_title' => '<h3>',
