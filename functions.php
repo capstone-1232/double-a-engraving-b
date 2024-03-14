@@ -49,7 +49,7 @@ function doubleaengraving_setup()
 	add_theme_support('post-thumbnails');
 	//add image sizing
 
-	add_image_size('category-thumb', 250, 250, true);
+	add_image_size('category-thumb', 250, 250, true); // size for category thumbnails
 	add_image_size('front-thumb', 350, 350, true); // these are placeholder sizes.
 
 	// This theme uses wp_nav_menu() in one location.
@@ -238,33 +238,37 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-//Create extra fields called Altnative Text and Status
-function my_extra_gallery_fields( $args, $attachment_id, $field ){
-    $args['alt'] = array(
-        'type' => 'text', 
-        'label' => 'Altnative Text', 
-        'name' => 'alt', 
-        'value' => get_field($field . '_alt', $attachment_id)
-    );
-    $args['status'] = array(
-        'type' => 'select', 
-        'label' => 'Status', 
-        'name' => 'status', 
-        'value' => array(
-            array(
-                '1' => 'Active',
-                 '2' => 'Inactive'
-            ), 
-            get_field($field . '_status', $attachment_id)
-        )
-    );
-    return $args;
+
+
+/**
+ * this function modifies the category template, this is used in tandem with the
+ * following function; essentially, the code in archive-products will serve as
+ * the category template and act as the category page too.
+ */
+function product_category_template( $templates = '' ){
+    if( !is_array( $templates ) && !empty( $templates ) ) {
+        $templates = locate_template( array( 'archive-products.php', $templates ), false );
+    } 
+    elseif( empty( $templates ) ) {
+        $templates = locate_template( 'archive-products.php', false );
+    }
+    else {
+        $new_template = locate_template( array( 'archive-products.php' ) );
+        if( !empty( $new_template ) ) array_unshift( $templates, $new_template );
+    }
+    return $templates;
 }
-add_filter( 'acf_photo_gallery_image_fields', 'my_extra_gallery_fields', 10, 3 );
+add_filter( 'category_template', 'product_category_template' );
 
-// add re-write rules to make a product details page
-// function pce_rewrite_rules ( ) {
-// 	add_rewrite_rule ( '^class/([^/]*)/([^/]*)/([^/]*)/?', 'index.php?post_type=section&catalog_name=$matches[1]&course_name=$matches[2]&section_no=$matches[3]','top' ) ;
-//   add_action ( 'init', 'pce_rewrite_rules', 10, 0 ) ;
-// }
-
+/**
+ * This function modifies the main WordPress archive query for categories
+ * and tags to include an array of post types instead of the default 'post' post type.
+ *
+ * @param object $query The main WordPress query.
+ */
+function tg_include_custom_post_types_in_archive_pages( $query ) {
+    if ( $query->is_main_query() && ! is_admin() && ( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) ) {
+        $query->set( 'post_type', array( 'post', 'products', 'products', 'category' ) );
+    }
+}
+add_action( 'pre_get_posts', 'tg_include_custom_post_types_in_archive_pages' );

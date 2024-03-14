@@ -12,28 +12,30 @@ get_header();
 ?>
 
 <?php if ( have_posts()) : ?>
-    <section>
-        <h2>categories</h2>
-    </section>
+
 
     <section>
         <div class="container">
-            <?php the_archive_title('<h1 class="page-title">', '</h1>'); 
-            the_archive_description('<div class="archive-description">', '</div>'); 
+            <?php
+            // remove the default "Category:" from the title, it doesnt look good
+            $title = get_the_archive_title();
+            $title = str_replace('Category:', '', $title);
+            echo '<h1 class="page-title">' . $title . '</h1>';
             ?>
+    
         </div>
-        <div class="new">
+        <div class="gallery gallery-columns-2">
             <?php
             while (have_posts()) :
                 the_post();
 
-                get_template_part('template-parts/content', 'catalog');
+                get_template_part('template-parts/content', 'products');
 
                 endwhile;
 
                 the_posts_navigation();
                 else :
-                    echo "aaa moment";
+                    echo "No posts found";
                 endif;
                 ?>  
         </div>

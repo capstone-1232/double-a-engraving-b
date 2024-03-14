@@ -39,7 +39,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	this implements some hidden SEO - the user is only going to see the logo, but there is text in the background
+	<!-- this implements some hidden SEO - the user is only going to see the logo, but there is text in the background -->
 	<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
 			<?php bloginfo('name'); ?>
 		</a></h1>

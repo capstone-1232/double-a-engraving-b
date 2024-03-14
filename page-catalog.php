@@ -43,29 +43,40 @@ get_header();
     <!-- the gallery class will use breakpoints to display 2x2 on mobile and 4x4 on larger screens -->
     <article class="gallery gallery-columns-2 gallery-columns-4">
         <?php
-            $categories = get_categories();
+        // Get all categories
+        $categories = get_categories();
 
-            echo '<div class="gallery-placeholder">';
-            foreach ($categories as $category) {
-                $category_link = get_category_link($category->term_id);
-                echo '<a href="' . esc_url($category_link) . '" title="' . $category->name . '">';
-                echo '<h2>' . $category->name . '</h2>';
-                echo '</a>';
+        // Loop through each category
+        foreach ($categories as $category) {
+            // Get the first image from the category
+            $args = array(
+                'post_type' => 'products',
+                'posts_per_page' => 1,
+                'category_name' => $category->name,
+                'orderby' => 'rand'
+            );
+            $query = new WP_Query($args);
+            if ($query->have_posts()) {
+                while ($query->have_posts()) {
+                    $query->the_post();
+                    // Check if 'use_for_catalog' field is true
+                    if (get_field('use_for_catalog')) {
+                        // Display the image and link to the category page
+                        ?>
+                        <?php get_template_part('template-parts/content', 'catalog'); ?>
+
+                        <?php
+                    }
+                }
             }
-            echo '</div>';
-            
-
-
+            wp_reset_postdata();
+        }
         ?>
-
     </article>
+    <!-- End of Catalog section -->
+
+
 </main>
-
-
-
-
-
-
 
 <?php
 get_sidebar();
