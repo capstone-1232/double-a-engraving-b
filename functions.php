@@ -49,7 +49,7 @@ function doubleaengraving_setup()
 	add_theme_support('post-thumbnails');
 	//add image sizing
 
-	add_image_size('category-thumb', 250, 250, true);
+	add_image_size('category-thumb', 250, 250, true); // size for category thumbnails
 	add_image_size('front-thumb', 350, 350, true); // these are placeholder sizes.
 
 	// This theme uses wp_nav_menu() in one location.
@@ -171,6 +171,18 @@ function doubleaengraving_widgets_init()
 			'after_title' => '</h3>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name' => 'Write Review',
+			'id' => 'review_form',
+			'description' => 'This widget contains the form to write a review..',
+			'before_widget' => '<section class="review-form">',
+			'after_widget' => '</section>',
+			'before_title' => '<h3>',
+			'after_title' => '</h3>',
+		)
+	);
 }
 add_action('widgets_init', 'doubleaengraving_widgets_init');
 
@@ -226,3 +238,37 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+/**
+ * this function modifies the category template, this is used in tandem with the
+ * following function; essentially, the code in archive-products will serve as
+ * the category template and act as the category page too.
+ */
+function product_category_template( $templates = '' ){
+    if( !is_array( $templates ) && !empty( $templates ) ) {
+        $templates = locate_template( array( 'archive-products.php', $templates ), false );
+    } 
+    elseif( empty( $templates ) ) {
+        $templates = locate_template( 'archive-products.php', false );
+    }
+    else {
+        $new_template = locate_template( array( 'archive-products.php' ) );
+        if( !empty( $new_template ) ) array_unshift( $templates, $new_template );
+    }
+    return $templates;
+}
+add_filter( 'category_template', 'product_category_template' );
+
+/**
+ * This function modifies the main WordPress archive query for categories
+ * and tags to include an array of post types instead of the default 'post' post type.
+ *
+ * @param object $query The main WordPress query.
+ */
+function tg_include_custom_post_types_in_archive_pages( $query ) {
+    if ( $query->is_main_query() && ! is_admin() && ( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) ) {
+        $query->set( 'post_type', array( 'post', 'products', 'products', 'category' ) );
+    }
+}
+add_action( 'pre_get_posts', 'tg_include_custom_post_types_in_archive_pages' );
