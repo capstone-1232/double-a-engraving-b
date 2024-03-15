@@ -40,29 +40,38 @@
 
 <body <?php body_class(); ?>>
 	<!-- this implements some hidden SEO - the user is only going to see the logo, but there is text in the background -->
-	<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+	<!-- <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
 			<?php bloginfo('name'); ?>
 		</a></h1>
-	<?php wp_body_open(); ?>
+	<?php wp_body_open(); ?> -->
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary">
 			<?php esc_html_e('Skip to content', 'doubleaengraving'); ?>
 		</a>
 
-		<header id="masthead" class="site-header">
+		<header id="masthead" class="site-header header-bg-container">
 			<div class="header-container">
 				<nav id="site-navigation" class="main-navigation">
 					<div class="mobile-menu-container">
-						<!-- site branding aka custom logo -->
+
+					<!-- Toggle Button -->
+						<!-- <button><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  									<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+							</svg>
+						</button> -->
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"
+							aria-label="Toggle menu"><svg viewBox="0 0 100 80" fill="white" width="40" height="40">
+                    		<rect width="85" height="15" rx="6"></rect>
+                    		<rect y="30" width="85" height="15" rx="6"></rect>
+                    		<rect y="60" width="85" height="15" rx="6"></rect>
+                		</svg></button>
+						<!-- site branding also known as custom logo -->
 						<div class="site-branding">
-							<h2 class="site-title">Main Navigation</h2>
 							<?php
 							the_custom_logo();
 							?>
 						</div>
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"
-							aria-label="Toggle menu">
-						</button>
+						
 					</div>
 					<!-- Nav Menu  -->
 					<?php

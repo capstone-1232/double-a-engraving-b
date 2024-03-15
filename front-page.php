@@ -18,14 +18,11 @@ get_header();
 <!-- Hero section  -->
 <section class="container-fluid  bg-black">
     <div class="container-md">
-
         <h1 class="text-white pt-4">Double-A Engraving</h1>
-        <h5 class="text-white py-3 text-wrap"> Offering affordable, custom laser engravings on a variety of materials.
-            If you imagine it, I create it.</h5>
-
+        <p class="text-white py-3 text-wrap"> Offering affordable, custom laser engravings on a variety of materials.
+            If you imagine it, I create it.</p>
         <div class="d-grid col-lg-4">
-
-            <button class="btn btn-light mb-4 justify-content-md-start" type="button">Make a Request</button>
+            <button class="call-to-action" type="button">Make a Request</button>
         </div>
     </div>
 </section>

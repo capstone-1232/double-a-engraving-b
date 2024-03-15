@@ -105,22 +105,11 @@ function doubleaengraving_setup()
 	 *
 	 * @link https://codex.wordpress.org/Theme_Logo
 	 */
-	add_theme_support(
-		'custom-logo',
-		array(
-			'height' => 250,
-			'width' => 250,
-			'flex-width' => true,
-			'flex-height' => true,
-		)
-	);
+	add_theme_support('custom-logo');
 
 
 }
 add_action('after_setup_theme', 'doubleaengraving_setup');
-
-
-
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -193,6 +182,12 @@ function doubleaengraving_widgets_init()
 	);
 }
 add_action('widgets_init', 'doubleaengraving_widgets_init');
+
+// Google Fonts Scripts
+function google_font_style() {
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap' );
+   }
+   add_action( 'wp_enqueue_scripts', 'google_font_style' );
 
 
 

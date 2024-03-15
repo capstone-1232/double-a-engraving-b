@@ -472,7 +472,12 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
+	background: #FEFEFE;
+	font-size: 100%;
+	line-height: 1.5rem;
+	font-family: "Luxurious Roman", serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 hr {
@@ -561,13 +566,10 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
+	background-color: #353535;
 	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	line-height: 1.2;
+	border: none;
 }
 
 button:hover,
@@ -966,4 +968,57 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+
+
+
+/* This CSS is written by Benisha */
+
+/* Header */
+.header-bg-container {
+	background-color: #353535;
+}
+
+.header-container {
+	padding: 0 1rem;
+}
+
+.mobile-menu-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.site-branding img {
+	width: 3.5rem;
+}
+
+.button svg {
+	fill: white;
+}
+
+
+/* Footer */
+.footer-bg-container{
+	background-color: #353535;
+}
+
+.footer-container {
+	color:white;
+	margin: 0 auto;
+	padding: 1rem;
+	margin-top: 3rem;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.social-icons svg {
+	fill: white;
+	width: 2.5rem;
 }
