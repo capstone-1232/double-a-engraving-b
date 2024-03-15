@@ -18,11 +18,22 @@ get_header();
 <!-- Hero section  -->
 <section class="container-fluid  bg-black">
     <div class="container-md">
-        <h1 class="text-white pt-4">Double-A Engraving</h1>
-        <p class="text-white py-3 text-wrap"> Offering affordable, custom laser engravings on a variety of materials.
+<<<<<<< HEAD
+        <h1 class="text-white pt-4text-white pt-4">Double-A Engraving</h1>
+        <p class="text-white py-3 text-wraptext-white py-3 text-wrap"> Offering affordable, custom laser engravings on a variety of materials.
             If you imagine it, I create it.</p>
+        <div class="d-grid col-lg-4d-grid col-lg-4">
+            <button class="btn btn-light mb-4 justify-content-md-start" type="buttoncall-to-action" type="button">Make a Request</button>
+=======
+
+        <h1 class="text-white pt-4">Double-A Engraving</h1>
+        <h5 class="text-white py-3 text-wrap"> Offering affordable, custom laser engravings on a variety of materials.
+            If you imagine it, I create it.</h5>
+
         <div class="d-grid col-lg-4">
-            <button class="call-to-action" type="button">Make a Request</button>
+
+            <button class="btn btn-light mb-4 justify-content-md-start" type="button">Make a Request</button>
+>>>>>>> parent of 60d5d1c (Merge pull request #20 from capstone-1232/jerrys-branch)
         </div>
     </div>
 </section>
@@ -32,7 +43,7 @@ get_header();
 
 
     <!-- Catalog section -->
-    <article class="py-3">
+    <section class="py-3">
         <h2>Carved Collections</h2>
         <p>Explore our collection and the versatility of engravings across
             a range of materials. Click the button to view more categories.
@@ -40,57 +51,35 @@ get_header();
 
         <!-- when CSS is implemented, this will display images at 2x2 on mobile screens
         then 4x4 on larger screens -->
-        <div class="gallery gallery-columns-2">
+        <div class="gallery gallery-columns-2 gallery-columns-4">
             <?php
-            $categories = get_categories();
-            // this is to make it so it loops only 4 times, displaying a maximum of 4 categories
-            $count = 0;
-            foreach ($categories as $cat):
-                if ($count >= 4) {
-                    break;
+            $categories = get_categories(array('number' => 4)); // Get up to 4 categories
+
+            // Randomize the order of categories, uncomment if desired
+            // shuffle($categories);
+
+            foreach ($categories as $category) {
+                // this gets the first product from each category and will use it for the landing page
+                // this is also limited to only showing 4 category/products.
+                $args = array(
+                    'post_type' => 'products',
+                    'posts_per_page' => 1,
+                    'category_name' => $category->name,
+                );
+                $loop = new WP_Query($args);
+                if ($loop->have_posts()) {
+                    $loop->the_post();
+                    get_template_part('template-parts/content', 'catalog');
+                   
                 }
-                $count++;
-                ?>
-                <!-- create a card to contain the category image and name -->
-                <div class="category-card">
-
-                    <?php
-                    $size = 'category-thumb';
-                    $url = get_term_link($cat);
-                    ?>
-                    <!-- section for the category image -->
-                    <div class="category-image">
-
-                        <a href="<?php echo esc_url($url); ?>">
-                            <!-- grabs the category image, sets its size to the custom size, and grabs alt text -->
-                            <?php z_taxonomy_image($cat->term_id, $size, $attr); ?>
-                        </a>
-                    </div>
-                    <!-- section for the category name -->
-                    <div class="category-name">
-                        <?php
-                        // this is to make the name also clickable instead of just the image and link to category
-                        $url = get_term_link($cat);
-                        ?>
-                        <a href="<?php echo esc_url($url); ?>">
-                            <?php echo $cat->name; ?>
-                        </a>
-
-
-                    </div>
-
-
-                    <?php
-                    ?>
-                </div>
-
-            <?php endforeach; ?>
+            }
+            ?>
         </div>
 
-        <div class="">
-            <button class="" type="button">View Catalog</button>
+        <div class="d-grid col-6 mx-auto col-lg-4">
+            <button class=" btn btn-primary mb-4 justify-content-md-center" type="button">View Catalog</button>
         </div>
-    </article>
+    </section>
     <!-- end of catalog section -->
     <hr>
     <!-- testimonials section  -->
