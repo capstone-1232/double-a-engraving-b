@@ -124,7 +124,7 @@ get_header();
     <!-- end of testimonials section -->
 
     <!-- about me section -->
-    <section class="test">
+    <section class="">
         <h2> About Me</h2>
         <div class="">
             <img src="https://via.placeholder.com/150" alt="Allan Anderson">
