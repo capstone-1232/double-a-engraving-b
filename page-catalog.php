@@ -40,7 +40,7 @@ get_header();
 
     <!-- Catalog section -->
     <!-- the gallery class will use breakpoints to display 2x2 on mobile and 4x4 on larger screens -->
-    <article class="gallery gallery-columns-2 gallery-columns-4">
+    <article class="a gallery gallery-columns-2 gallery-columns-4">
         <?php foreach (get_categories() as $cat): ?>
             <!-- create a card to contain the category image and name -->
             <div class="category-card">
