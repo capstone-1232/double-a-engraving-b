@@ -39,42 +39,49 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-	<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+	<!-- this implements some hidden SEO - the user is only going to see the logo, but there is text in the background -->
+	<!-- <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
 			<?php bloginfo('name'); ?>
-		</a> </h1>
-	<?php wp_body_open(); ?>
+		</a></h1>
+	<?php wp_body_open(); ?> -->
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary">
 			<?php esc_html_e('Skip to content', 'doubleaengraving'); ?>
 		</a>
 
+		<header id="masthead" class="site-header header-bg-container">
+			<div class="header-container">
+				<nav id="site-navigation" class="main-navigation">
+					<div class="mobile-menu-container">
 
-		<nav>
-			<div>
-
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'headermenu',
-						'menu_id' => 'headermenu',
-
-					)
-				);
-
-				// wp_nav_menu( array(
-				// 	'theme_location'  => 'menu-1',
-				// 	'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
-				// 	'menu_class'      => 'navbar-nav',
-				// 	'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-				// 	'walker'          => new WP_Bootstrap_Navwalker(),
-				// this is to utilize bootstrap navwalker to allow submenus to be clicked
-				?>
-
+					<!-- Toggle Button -->
+						<!-- <button><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  									<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+							</svg>
+						</button> -->
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"
+							aria-label="Toggle menu"><svg viewBox="0 0 100 80" fill="white" width="40" height="40">
+                    		<rect width="85" height="15" rx="6"></rect>
+                    		<rect y="30" width="85" height="15" rx="6"></rect>
+                    		<rect y="60" width="85" height="15" rx="6"></rect>
+                		</svg></button>
+						<!-- site branding also known as custom logo -->
+						<div class="site-branding">
+							<?php
+							the_custom_logo();
+							?>
+						</div>
+						
+					</div>
+					<!-- Nav Menu  -->
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'headermenu',
+							'menu_id' => 'headermenu',
+						)
+					);
+					?>
+				</nav><!-- #site-navigation -->
 			</div>
-
-
-		</nav>
-
-		<!-- #site-navigation -->
 		</header><!-- #masthead -->

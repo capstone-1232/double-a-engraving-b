@@ -18,15 +18,11 @@ get_header();
 <!-- Hero section  -->
 <section class="container-fluid  bg-black">
     <div class="container-md">
-
         <h1 class="text-white pt-4">Double-A Engraving</h1>
-        <h5 class="text-white py-3 text-wrap"> Offering affordable, custom laser engravings on a variety of materials.
-            If you
-            imagine it, I create it.</h5>
-
+        <p class="text-white py-3 text-wrap"> Offering affordable, custom laser engravings on a variety of materials.
+            If you imagine it, I create it.</p>
         <div class="d-grid col-lg-4">
-
-            <button class="btn btn-light mb-4 justify-content-md-start" type="button">Make a Request</button>
+            <button class="call-to-action" type="button">Make a Request</button>
         </div>
     </div>
 </section>
@@ -36,7 +32,7 @@ get_header();
 
 
     <!-- Catalog section -->
-    <section class="py-3">
+    <article class="py-3">
         <h2>Carved Collections</h2>
         <p>Explore our collection and the versatility of engravings across
             a range of materials. Click the button to view more categories.
@@ -44,65 +40,91 @@ get_header();
 
         <!-- when CSS is implemented, this will display images at 2x2 on mobile screens
         then 4x4 on larger screens -->
-        <div class="gallery gallery-columns-2 gallery-columns-4">
+        <div class="gallery gallery-columns-2">
             <?php
-            $args = array(
-                'post_type' => 'lp-images',
-                'posts_per_page' => -1,
-            );
-            $loop = new WP_Query($args);
-            while ($loop->have_posts()) {
-                $loop->the_post();
-                $image = get_field('landing_page_images');
-                $size = 'category-thumb'; // category thumb is a custom image size
-                if ($image) {
-                    echo wp_get_attachment_image($image, $size);
+            $categories = get_categories();
+            // this is to make it so it loops only 4 times, displaying a maximum of 4 categories
+            $count = 0;
+            foreach ($categories as $cat):
+                if ($count >= 4) {
+                    break;
                 }
+                $count++;
                 ?>
-                <?php
-            }
+                <!-- create a card to contain the category image and name -->
+                <div class="category-card">
 
-            ?>
+                    <?php
+                    $size = 'category-thumb';
+                    $url = get_term_link($cat);
+                    ?>
+                    <!-- section for the category image -->
+                    <div class="category-image">
+
+                        <a href="<?php echo esc_url($url); ?>">
+                            <!-- grabs the category image, sets its size to the custom size, and grabs alt text -->
+                            <?php z_taxonomy_image($cat->term_id, $size, $attr); ?>
+                        </a>
+                    </div>
+                    <!-- section for the category name -->
+                    <div class="category-name">
+                        <?php
+                        // this is to make the name also clickable instead of just the image and link to category
+                        $url = get_term_link($cat);
+                        ?>
+                        <a href="<?php echo esc_url($url); ?>">
+                            <?php echo $cat->name; ?>
+                        </a>
+
+
+                    </div>
+
+
+                    <?php
+                    ?>
+                </div>
+
+            <?php endforeach; ?>
         </div>
 
-        <div class="d-grid col-6 mx-auto col-lg-4">
-            <button class=" btn btn-primary mb-4 justify-content-md-center" type="button">View Catalog</button>
+        <div class="">
+            <button class="" type="button">View Catalog</button>
         </div>
-    </section>
+    </article>
     <!-- end of catalog section -->
     <hr>
     <!-- testimonials section  -->
     <section class="py-3">
         <h2> Testimonials</h2>
-
-        <div class="row">
-            <div class="col-md-3 py-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">"I love my new engraved cutting board!"</h5>
-                        <p class="card-text">- Jane Doe</p>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <?php
+            $args = array(
+                'post_type' => 'customer-testimonial',
+                'posts_per_page' => -1,
+            );
+            $loop = new WP_Query($args);
+            while ($loop->have_posts()) {
+                $loop->the_post();
+                get_template_part('template-parts/content', 'testimonials');
+                ?>
+                <?php
+            }
+            ?>
         </div>
 
-        <div class="d-grid col-6 mx-auto col-lg-4">
-            <button class="btn btn-primary mb-4 justify-content-md-center" type="button">View Testimonials
+
+        <div class="">
+            <button class="" type="button">View Testimonials
             </button>
 
     </section>
     <!-- end of testimonials section -->
 
     <!-- about me section -->
-    <section class="py-3 px-3">
+    <section class="">
         <h2> About Me</h2>
-        <div class="d-flex justify-content-center">
-
-
-            <?php
-            echo wp_get_attachment_image('https://karikarij.com/wordpress/wp-content/uploads/2024/02/elementor-placeholder-image.webp', 'front-thumb');
-            ?>
-
+        <div class="">
+            <img src="https://via.placeholder.com/150" alt="Allan Anderson">
 
         </div>
         <p>I am Allan Anderson, I have been laser engraving since 2022. I work out of my home and sell products at
@@ -118,13 +140,13 @@ get_header();
     <!-- end of about me section -->
 
     <!-- location section -->
-    <section class=" py-3 px-3">
+    <section class="">
         <h2>Location</h2>
 
         <p>
             To meet in person or buy any products, come over to <u> Capilano Mall, 5004 98 Ave Edmonton </u>.
-            I am available on Saturdays from 9:30 AM - 3:00 PM. You can also reach me at <u>780-220-9681. </u>
-            Use the google maps below to get directions if needed.
+            I am available on Saturdays from 9:30 AM - 3:00 PM. You can also reach out to me at <u>780-220-9681. </u>
+            Use the google maps below to get accurate location details.
         </p>
 
     </section>
@@ -132,17 +154,16 @@ get_header();
     <!-- end of location section -->
 
     <!-- tagline section -->
-    <section class="container-md py-3">
+    <section class="">
 
-        <h2 class="text-center"> If you imagine it, I create it. </h2>
-        <div class="d-grid col-6 mx-auto col-lg-4">
+        <h2 class=""> If you imagine it, I create it. </h2>
+        <div class="">
 
-            <button class="catbtn btn btn-primary mb-4 justify-content-md-center" type="button"> Make a Request
+            <button class="" type="button"> Make a Request
             </button>
         </div>
 
     </section>
-
 </main><!-- #main -->
 
 <?php
