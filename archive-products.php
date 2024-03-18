@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This is the template page to display a single product category page
+ * This is the template page to display a  product category page
  * These posts will be uploaded by the client user
  * @package doubleAengraving
  * 
