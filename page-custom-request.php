@@ -19,46 +19,35 @@ get_header();
 <main class="customrequest-main">
     <!-- start of custom engraving request information -->
     <section>
-        <article>
-
-            <h1>
-                <?php the_title(); ?>
-            </h1>
-            <p>The core part of our service is that we offer custom engravings on a variety of materials,
-                such as wood, plastic, glass, leather, anodized aluminum, ceramics, slate, and stainless steel.
-                The frame size we use allows engraving on a maximum of 18" x 22".
-            </p>
-
-            <h2>Details & Rates</h2>
-            <p>I charge $5.00 per hour for engraving. You may supply your own material or I can purchase
-                the material necessary. If you choose wood, you will be prompted to choose from a variety of woods -
-                some engravings
-                look much better on certain woods. If you aren't sure, choose "Discuss later" and we can talk about it.
-            </p>
-
-            <p>
-                Delivery methods for the finished product can either be pick-up at the farmers' market,
-                delivered to your residence by me, or shipped via Canada post (extra fees added to the final price).
-
-            </p>
-
-            <p>Please fill out the request form below, if you have any questions please contact me.</p>
-        </article>
-
+        <div class="inner-container">
+            <article>
+                <h1>Custom Request</h1>
+                <p>The core part of our service is that we offer custom engravings on a variety of materials.</p>
+                <p>
+                    This includes wood, plastic, glass, leather, anodized aluminum, ceramics, slate, and stainless steel.
+                    The frame size we use allows engraving on a maximum of 15" x 16".
+                </p>
+    
+                <h2>Details & Rates</h2>
+                <p>I charge $5.00 per hour and I can purchase the necessary material which will be including in your final cost.</p>
+                <p> If you choose wood, you will be prompted to choose from a variety of woods</p>  
+                <p>Some engravings look much better on certain woods. If you aren't sure, choose "Discuss later" and we can talk about it.</p>
+                <p>Delivery methods for the finished product can either be pick-up at the farmers' market, delivered to your residence, or shipped via Canada post (extra fees added to the final price).</p>
+                <p>Please fill out the request form below, if you have any questions please contact me.</p>
+            </article>
+        </div>
     </section>
     <!-- end of custom engraving request information -->
 
     <!-- start of custom engraving request form -->
     <section>
-        <article>
-
+        <div class="inner-container">
             <h2>Request Form</h2>
             <p>Fields with * are required.</p>
-
             <div class="request-form">
                 <?php dynamic_sidebar('custom-request_form') ?>
             </div>
-        </article>
+        </div>
     </section>
     <!-- end of custom engraving request form -->
 
