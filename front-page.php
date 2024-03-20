@@ -19,10 +19,10 @@ get_header();
 <section>
     <div class="banner-area">
         <div class="banner-container">
-            <h1 class="text-white pt-4">Double-A Engraving</h1>
-            <p class="text-white py-3 text-wrap"> Offering affordable, custom laser engravings on a variety of materials.
+            <h1>Double-A Engraving</h1>
+            <p> Offering affordable, custom laser engravings on a variety of materials.
                 If you imagine it, I create it.</p>
-            <div class="d-grid col-lg-4">
+            <div>
                 <button class="call-to-action" type="button">Make a Request</button>
             </div>
         </div>
