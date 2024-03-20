@@ -93,8 +93,17 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+	font-family: "Arvo", serif;
+	font-weight: 700;
+	color: #FEFEFE;
+	font-size: clamp(2.2rem, 2.1543rem + 0.2286vw, 2.4rem);
+	margin: 0;
+}
+
+h2 {
+	font-family: "Arvo", serif;
+	font-weight: 700;
+	font-size: clamp(1.8rem, 1.7543rem + 0.2286vw, 2rem);
 }
 
 /* Grouping content
@@ -104,11 +113,6 @@ h1 {
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
-hr {
-	box-sizing: content-box;
-	height: 0;
-	overflow: visible;
-}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -472,14 +476,12 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
-}
-
-hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+	background: #FEFEFE;
+	font-size: 100%;
+	line-height: 1.5rem;
+	font-family: "Luxurious Roman", serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 ul,
@@ -495,8 +497,8 @@ ol {
 	list-style: decimal;
 }
 
-li > ul,
-li > ol {
+li>ul,
+li>ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
@@ -561,13 +563,10 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
+	background-color: #353535;
 	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	line-height: 1.2;
+	border: none;
 }
 
 button:hover,
@@ -655,8 +654,11 @@ textarea {
 .main-navigation ul {
 	display: none;
 	list-style: none;
+	color: #fefefe;
 	margin: 0;
 	padding-left: 0;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
 }
 
 .main-navigation ul ul {
@@ -673,23 +675,29 @@ textarea {
 	top: 0;
 }
 
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
+.main-navigation ul ul li:hover>ul,
+.main-navigation ul ul li.focus>ul {
 	display: block;
 	left: auto;
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+	display: block;
+	padding: 2rem;
+	
 }
 
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+.main-navigation ul li:hover>ul,
+.main-navigation ul li.focus>ul {
 	left: auto;
 }
 
 .main-navigation li {
 	position: relative;
+	font-family: "Arvo", serif;
+	font-size: clamp(1.2rem, 1.1543rem + 0.2286vw, 1.4rem);
+	line-height: 1.5rem;
+	color: #fefefe;
 }
 
 .main-navigation a {
@@ -715,10 +723,8 @@ textarea {
 }
 
 .site-main .comment-navigation,
-.site-main
-.posts-navigation,
-.site-main
-.post-navigation {
+.site-main .posts-navigation,
+.site-main .post-navigation {
 	margin: 0 0 1.5em;
 }
 
@@ -966,4 +972,215 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+
+
+
+/* This CSS is written by Benisha */
+
+/* Typography */
+
+h1 {
+	font-size: clamp(2.2rem, 2.1543rem + 0.2286vw, 2.4rem);
+	line-height: 3rem;
+}
+
+h2 {
+	font-size: clamp(1.8rem, 1.7543rem + 0.2286vw, 2rem);
+	line-height: 3rem;
+}
+
+h3 {
+	font-size: clamp(1.4rem, 1.3543rem + 0.2286vw, 1.6rem);
+	line-height: 3rem;
+	text-align: center;
+	margin: 0;
+}
+
+p {
+	font-size: clamp(1.2rem, 1.1543rem + 0.2286vw, 1.4rem);
+	line-height: 1.5rem;
+}
+
+/* Header */
+.header-bg-container {
+	background-color: #353535;
+}
+
+.header-container {
+	padding: 0 1rem;
+}
+
+.mobile-menu-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.site-branding img {
+	width: 3.5rem;
+}
+
+.button svg {
+	fill: white;
+}
+
+/* Banner Area */
+.banner-area {
+	margin-bottom: 3rem;
+}
+
+.banner-container {
+	padding: 0 1rem;
+	background-color: rgba(0, 0, 0, 0.445);
+	background-image: url("http://www.benishaanand.ca/double-a-engraving/wp-content/uploads/2024/03/banner-image-small.webp");
+	background-blend-mode: multiply;
+	background-size:cover;
+	background-repeat: no-repeat;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+.banner-container p {
+	color: #FEFEFE;
+}
+
+.banner-area img {
+	max-width: 100vw;
+}
+
+.call-to-action {
+	color: #353535;
+	background-color: #fefefe;
+	border-radius: 8px;
+	padding: 0.75rem 1.2rem;
+	width: 75%;
+
+}
+
+/* Catalog Section */
+.catalog-container {
+	padding: 0 1rem;
+}
+
+.catalog-flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.category-card {
+	flex-basis: calc(50% - 10px);
+	margin-bottom: 20px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.category-image img {
+	width: 100%;
+	display: block;
+}
+
+.category-image a {
+	display:block;
+	margin: 0;
+	padding: 0;
+}
+
+.category-name {
+	background-color: #353535;
+	margin-bottom: 0;
+}
+
+.category-name a {
+	text-decoration: none;
+	color: #fefefe;
+}
+
+.view-catalog-button {
+	color: #FEFEFE;
+	background-color: #9A0808;
+	border-radius: 8px;
+	padding: 0.75rem 1.2rem;
+	width: 75%;
+}
+
+/* Testimonials Section */
+.testimonials-container {
+	padding: 0 1rem;
+}
+
+.view-testimonials-button {
+	color: #FEFEFE;
+	background-color: #9A0808;
+	border-radius: 8px;
+	padding: 0.75rem 1.2rem;
+	width: 75%;
+}
+
+/* About me Section */
+
+.about-me-section {
+	padding: 0 1rem;
+}
+
+.about-me-button {
+	color: #FEFEFE;
+	background-color: #9A0808;
+	border-radius: 8px;
+	padding: 0.75rem 1.2rem;
+	width: 75%;
+}
+
+/* Location Section */
+.location-container {
+	padding: 0 1rem;
+}
+
+
+/* Tagline Section */
+.tagline-container {
+	padding: 0 1rem;
+	margin: 0 auto;
+}
+
+.tagline-paragraph {
+	font-family: "Calligraffitti", cursive;
+	font-weight: 700;
+	font-size: clamp(1.6rem, 1.5543rem + 0.2286vw, 1.8rem);
+	line-height: 3rem;
+	font-style: normal;
+}
+
+.tagline-button {
+	display: block;
+	color: #FEFEFE;
+	background-color: #9A0808;
+	border-radius: 8px;
+	padding: 0.75rem 1.2rem;
+	width: 75%;
+}
+
+/* Footer */
+.footer-bg-container {
+	background-color: #353535;
+}
+
+.footer-container {
+	color: white;
+	margin: 0 auto;
+	padding: 1rem;
+	margin-top: 3rem;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.social-icons svg {
+	fill: white;
+	width: 2.5rem;
 }
