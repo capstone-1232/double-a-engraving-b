@@ -49,8 +49,8 @@ function doubleaengraving_setup()
 	add_theme_support('post-thumbnails');
 	//add image sizing
 
-	add_image_size('category-thumb', 250, 250, true); // size for category thumbnails
-	add_image_size('front-thumb', 350, 350, true); // these are placeholder sizes.
+	// add_image_size('category-thumb', 250, 250, true); // size for category thumbnails
+	// add_image_size('front-thumb', 350, 350, true); // these are placeholder sizes.
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
@@ -59,6 +59,8 @@ function doubleaengraving_setup()
 			'footermenu' => esc_html__('Footer', 'doubleaengraving'),
 		)
 	);
+
+
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -129,11 +131,11 @@ add_action('after_setup_theme', 'doubleaengraving_setup');
  *
  * @global int $content_width
  */
-function doubleaengraving_content_width()
-{
-	$GLOBALS['content_width'] = apply_filters('doubleaengraving_content_width', 640);
-}
-add_action('after_setup_theme', 'doubleaengraving_content_width', 0);
+// function doubleaengraving_content_width()
+// {
+// 	$GLOBALS['content_width'] = apply_filters('doubleaengraving_content_width', 640);
+// }
+// add_action('after_setup_theme', 'doubleaengraving_content_width', 0);
 
 
 /**
@@ -193,6 +195,13 @@ function doubleaengraving_widgets_init()
 	);
 }
 add_action('widgets_init', 'doubleaengraving_widgets_init');
+
+
+// Google Fonts Scripts
+function google_font_style() {
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Luxurious+Roman&display=swap' );
+   }
+   add_action( 'wp_enqueue_scripts', 'google_font_style' );
 
 
 
