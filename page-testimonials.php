@@ -12,30 +12,18 @@ get_header();
 ?>
 
 <main>
+    <h1>
+        <section class="testimonials-section">
+        <?php the_title(); ?>
+    </h1>
     <!-- the idea behind this section is that it will be scrollable -->
     <!-- on mobile views, it will show 1 testimonial but be scrollable, and on larger views it will show 3 -->
-    <section class="container-fluid">
-        <article>
-            <h1>
-                <?php the_title(); ?>
-            </h1>
-            <p>Read what our customers say about our products and services.</p>
-            <div class="testimonial-gallery">
-                <?php
-                // this loop will display the testimonials, see the template-part for more
-                $args = array(
-                    'post_type' => 'customer-testimonial',
-                    'posts_per_page' => -1,
-                );
-                $loop = new WP_Query($args);
-                while ($loop->have_posts()) {
-                    $loop->the_post();
-                    get_template_part('template-parts/content', 'testimonials');
-                    ?>
-                    <?php
-                }
-                ?>
-            </div>
+        <article class="inner-container">
+           
+            <h4>Read what our customers say about our products and services.</h4>
+            
+            <?php echo do_shortcode('[site_reviews hide="date" display="10" assigned_terms="user-testimonials"]') ?>
+        
         </article>
     </section>
     <div class="write-review-button">

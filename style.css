@@ -69,6 +69,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
+	margin: 0 !important;
 }
 
 /* Sections
@@ -78,7 +79,7 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-	margin: 0;
+	margin: 0;	
 }
 
 /**
@@ -408,7 +409,7 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	/* margin-bottom: 1.5em; */
 }
 
 dfn,
@@ -693,7 +694,7 @@ textarea {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 840px) {
 
 	.menu-toggle {
 		display: none;
@@ -701,6 +702,11 @@ textarea {
 
 	.main-navigation ul {
 		display: flex;
+	}
+
+	.header-contaienr .mobile-menu-container{
+		/* make the header sticky */
+		
 	}
 }
 
@@ -737,7 +743,7 @@ textarea {
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	margin: 0em;
 }
 
 .updated:not(.published) {
@@ -955,6 +961,7 @@ textarea {
 	margin-right: auto;
 	margin-bottom: 1.5em;
 }
+
 
 
 
