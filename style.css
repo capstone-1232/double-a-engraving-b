@@ -1271,3 +1271,42 @@ p {
 	padding: 0.75rem 1.2rem;
 	width: 75%;
 }
+
+
+/** CSS written by Jerry */
+
+/*Testimonials section */
+.testimonials-scroll {
+	/* Change 'auto' to 'scroll' */
+   
+   
+}
+
+.glsr {
+   padding: 1rem 0rem;
+}
+
+.glsr-reviews,
+.glsr-reviews-wrap {
+   display: flex !important;
+   flex-wrap: nowrap; /* Add this line to prevent wrapping */
+   flex-direction: column;
+   
+}
+.glsr-review{
+   background-color: #F2F2F2;
+   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+   border-radius: 8px;
+   padding: 1rem;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+   .half-width{
+	   width: 50%;
+
+   }
+   
+} 
