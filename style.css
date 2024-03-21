@@ -1300,10 +1300,19 @@ p {
    padding: 1rem;
 }
 
+/* for some reason on my own page, the link text is not white so i need to manually change it with this CSS
+ignore otherwise */
+header a{
+	color: white;
+}
+a:visited{
+	color: white;
+}
+
 
 
 @media screen and (min-width: 768px) {
-
+	/* feel free to ignore this min-width, was experimenting */
    .half-width{
 	   width: 50%;
 
