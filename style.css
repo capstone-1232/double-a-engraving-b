@@ -1300,6 +1300,8 @@ p {
    padding: 1rem;
 }
 
+/* for some reason on my own page, the link text is not white so i need to manually change it with this CSS
+ignore otherwise */
 header a{
 	color: white;
 }
