@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This is the template page to display a single product category page
+ * This is the template page to display a  product category page
  * These posts will be uploaded by the client user
  * @package doubleAengraving
  * 
@@ -21,6 +21,11 @@ get_header();
             $title = get_the_archive_title();
             $title = str_replace('Category:', '', $title);
             echo '<h1 class="page-title">' . $title . '</h1>';
+
+            $description = get_the_archive_description();
+            if ($description) {
+                echo '<div class="category-description">' . $description . '</div>';
+            }
             ?>
     
         </div>

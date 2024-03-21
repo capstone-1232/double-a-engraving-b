@@ -93,22 +93,11 @@ get_header();
     <!-- testimonials section  -->
     <section class="testimonials-container">
         <h2>Testimonials</h2>
-        <div>
-            <?php
-            $args = array(
-                'post_type' => 'customer-testimonial',
-                'posts_per_page' => -1,
-            );
-            $loop = new WP_Query($args);
-            while ($loop->have_posts()) {
-                $loop->the_post();
-                get_template_part('template-parts/content', 'testimonials');
-                ?>
-                <?php
-            }
-            ?>
+        <div class="testimonials">
+        <?php echo do_shortcode('[site_reviews hide="date" display="3" assigned_terms="user-testimonials"]') ?>
         </div>
             <button class="view-testimonials-button" type="button">View Testimonials</button>
+        
 
     </section>
     <!-- end of testimonials section -->

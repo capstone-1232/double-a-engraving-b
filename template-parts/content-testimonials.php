@@ -1,3 +1,6 @@
+<!-- this isnt used anymore, ignore it, we instead use the Site Reviews plugin -->
+
+
 <div class="testimonial-card">
     <!-- create a container/card for testimonials -->
     <?php

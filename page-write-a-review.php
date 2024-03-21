@@ -34,7 +34,7 @@ get_header();
     <!-- start of review form -->
         <article>
             <div class="review-form inner-container">
-                <?php dynamic_sidebar('review_form') ?>
+                <?php echo do_shortcode('[site_reviews_form class="half-width" assigned_terms="user-testimonials"]')  ?>
             </div>
         </article>
     <!-- end of review form -->
