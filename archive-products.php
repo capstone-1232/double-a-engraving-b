@@ -15,16 +15,16 @@ get_header();
 
 
     <section>
-        <div class="container">
+        <div class="inner-container">
+        <div>
             <?php
             // remove the default "Category:" from the title, it doesnt look good
             $title = get_the_archive_title();
             $title = str_replace('Category:', '', $title);
             echo '<h1 class="page-title">' . $title . '</h1>';
             ?>
-    
         </div>
-        <div class="gallery gallery-columns-2">
+        <div>
             <?php
             while (have_posts()) :
                 the_post();
@@ -39,10 +39,12 @@ get_header();
                 endif;
                 ?>  
         </div>
+        <div class="make-a-request-btn">
+        <a>Make a Request</a>
+        </div>
+        </div>
     </section>
-    <div class="catalogbtn">
-        <button>Back to Catalog</button>
-    </div>
+   
 
 
 

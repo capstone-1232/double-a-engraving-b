@@ -12,14 +12,13 @@ get_header();
 ?>
 
 <main>
-    <h1>
-        <?php the_title(); ?>
-    </h1>
     <!-- the idea behind this section is that it will be scrollable -->
     <!-- on mobile views, it will show 1 testimonial but be scrollable, and on larger views it will show 3 -->
     <section class="container-fluid">
         <article>
-            <h2>Testimonials</h2>
+            <h1>
+                <?php the_title(); ?>
+            </h1>
             <p>Read what our customers say about our products and services.</p>
             <div class="testimonial-gallery">
                 <?php
@@ -39,8 +38,12 @@ get_header();
             </div>
         </article>
     </section>
-    <button>Write a Review</button>
-    <button>Back to Home</button>
+    <div class="write-review-button">
+        <a>Write a Review</a>
+        </div>
+        <div class="back-home-button">
+        <a>Back to Home</a>
+        </div>
 </main>
 
 <?php
