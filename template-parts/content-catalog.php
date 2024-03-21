@@ -1,5 +1,5 @@
 
-
+<!-- this is obsolete/not used due to category images plugin -->
 <?php foreach (get_categories() as $cat): ?>
     <!-- create a card to contain the category image and name -->
     <div class="category-card">

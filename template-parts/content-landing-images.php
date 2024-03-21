@@ -9,6 +9,7 @@
 
 ?>
 
+<!-- this is not used, it can be deleted -->
 
 <div class="gallery-item">
 <?php the_post_thumbnail( 'category-thumb' );	 ?>

@@ -21,6 +21,11 @@ get_header();
             $title = get_the_archive_title();
             $title = str_replace('Category:', '', $title);
             echo '<h1 class="page-title">' . $title . '</h1>';
+
+            $description = get_the_archive_description();
+            if ($description) {
+                echo '<div class="category-description">' . $description . '</div>';
+            }
             ?>
     
         </div>

@@ -69,7 +69,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
-	margin: 0;
+	margin: 0 !important;
 }
 
 /* Sections
@@ -409,7 +409,7 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	/* margin-bottom: 1.5em; */
 }
 
 dfn,
@@ -522,12 +522,12 @@ table {
 
 /* Links
 --------------------------------------------- */
-a {
-	color: #4169e1;
+header a {
+	color: white;
 }
 
 a:visited {
-	color: #800080;
+	
 }
 
 a:hover,
@@ -700,7 +700,7 @@ textarea {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 840px) {
 
 	.menu-toggle {
 		display: none;
@@ -708,6 +708,11 @@ textarea {
 
 	.main-navigation ul {
 		display: flex;
+	}
+
+	.header-contaienr .mobile-menu-container{
+		/* make the header sticky */
+		
 	}
 }
 
@@ -744,7 +749,7 @@ textarea {
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	margin: 0em;
 }
 
 .updated:not(.published) {
@@ -1247,3 +1252,51 @@ p {
 .forminator-select.forminator-select-dropdown-container--open .forminator-select-dropdown .select2-results .select2-results__options .select2-results__option {
 	z-index: 1;
 }
+
+
+
+
+
+
+
+
+
+/** CSS written by Jerry */
+
+/*Testimonials section */
+.testimonials-scroll {
+	 /* Change 'auto' to 'scroll' */
+	
+	
+}
+
+.glsr {
+	padding: 1rem 0rem;
+}
+
+.glsr-reviews,
+.glsr-reviews-wrap {
+	display: flex !important;
+	flex-wrap: nowrap; /* Add this line to prevent wrapping */
+	flex-direction: column;
+	
+}
+.glsr-review{
+	background-color: #F2F2F2;
+	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+	padding: 1rem;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+	.half-width{
+		width: 50%;
+
+	}
+	
+} 
+
+
