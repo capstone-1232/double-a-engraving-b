@@ -522,13 +522,7 @@ table {
 
 /* Links
 --------------------------------------------- */
-header a {
-	color: white;
-}
 
-a:visited {
-	
-}
 
 a:hover,
 a:focus,
@@ -1253,50 +1247,27 @@ p {
 	z-index: 1;
 }
 
+/* Single Product Page */
 
-
-
-
-
-
-
-
-/** CSS written by Jerry */
-
-/*Testimonials section */
-.testimonials-scroll {
-	 /* Change 'auto' to 'scroll' */
-	
-	
+.product-content h1 {
+	margin-bottom: 1.5rem;
 }
 
-.glsr {
-	padding: 1rem 0rem;
+.product-content img {
+	margin-bottom: 1.5rem;
 }
 
-.glsr-reviews,
-.glsr-reviews-wrap {
-	display: flex !important;
-	flex-wrap: nowrap; /* Add this line to prevent wrapping */
-	flex-direction: column;
-	
+.request-button {
+	margin-top: 1.5rem;
 }
-.glsr-review{
-	background-color: #F2F2F2;
-	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+
+
+.request-button, .catalog-button, .make-a-request-btn, .write-review-button, .back-home-content {
+	margin-bottom: 1.5rem;
+	display: block;
+	color: #FEFEFE;
+	background-color: #9A0808;
 	border-radius: 8px;
-	padding: 1rem;
+	padding: 0.75rem 1.2rem;
+	width: 75%;
 }
-
-
-
-@media screen and (min-width: 768px) {
-
-	.half-width{
-		width: 50%;
-
-	}
-	
-} 
-
-

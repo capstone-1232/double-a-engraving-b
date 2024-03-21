@@ -26,8 +26,12 @@ get_header();
         
         </article>
     </section>
-    <button>Write a Review</button>
-    <button>Back to Home</button>
+    <div class="write-review-button">
+        <a>Write a Review</a>
+        </div>
+        <div class="back-home-button">
+        <a>Back to Home</a>
+        </div>
 </main>
 
 <?php

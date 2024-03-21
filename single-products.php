@@ -12,42 +12,40 @@ get_header();
 ?>
 
 <main class="single-product-entry">
-    <!-- can probably use a container here for whole page, implement reusable CSS -->
-    <h1>
-        <?php the_title(); ?>
-    </h1>
 
+    <div class="inner-container">
 
-    <!-- whole product section, the image and description -->
-    <article class="product">
+        <div class="product-content">
+            <h1>
+                <?php the_title(); ?>
+            </h1>
+    
+            <article class="product">
+        
+                <div class="product-image">
+                    <?php
+        
+                    $image = get_field('product_image');
+                    if ($image) {
+                        echo wp_get_attachment_image($image, 'full');
+                    }
+                    ?>
+                </div>
+        
+                <div class="product-description">
+                    <?php the_field('product_description'); ?>
+                </div>
+            </article>
+        
+            <div class="request-button">
+                <a>Make A Request</a>
+            </div>
+        
+            <div class="catalog-button">
+                <a>Back to Catalog</a>
+            </div>
 
-        <div class="product-image">
-            <?php
-
-            $image = get_field('product_image');
-            if ($image) {
-                echo wp_get_attachment_image($image, 'full');
-            }
-            ?>
         </div>
-
-
-
-        <div class="product-description">
-            <?php the_field('product_description'); ?>
-
-        </div>
-    </article>
-    <!-- end of product section -->
-  
-
-
-    <div class="requestbutton">
-        <button>Make A Request</button>
-    </div>
-
-    <div class="catalogbtn">
-        <button>Back to Catalog</button>
     </div>
 
 
