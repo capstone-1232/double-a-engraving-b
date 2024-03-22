@@ -12,26 +12,28 @@ get_header();
 ?>
 
 <main>
-    <h1>
-        <section class="testimonials-section">
-        <?php the_title(); ?>
-    </h1>
-    <!-- the idea behind this section is that it will be scrollable -->
-    <!-- on mobile views, it will show 1 testimonial but be scrollable, and on larger views it will show 3 -->
-        <article class="inner-container">
-           
-            <h4>Read what our customers say about our products and services.</h4>
-            
-            <?php echo do_shortcode('[site_reviews hide="date" display="10" assigned_terms="user-testimonials"]') ?>
-        
-        </article>
-    </section>
-    <div class="write-review-button">
-        <a>Write a Review</a>
+    <div class="inner-container">
+        <div class="horizontal-scroll-testimonials">
+            <section class="testimonials-section">
+            <h1><?php the_title(); ?></h1>
+    
+            <article>
+                <p>Read what our customers say about our products and services.</p>
+                <div class="content-testimonials"> 
+                <div class="testimonials-decor"></div>
+                <?php echo do_shortcode('[site_reviews hide="date" display="10" assigned_terms="user-testimonials"]') ?>
+                </div>
+            </article>
+            </section>
         </div>
-        <div class="back-home-button">
-        <a>Back to Home</a>
-        </div>
+
+        <div class="write-review-button">
+            <a>Write a Review</a>
+            </div>
+            <div class="back-home-button">
+            <a>Back to Home</a>
+            </div>   
+</div>
 </main>
 
 <?php

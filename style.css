@@ -1036,6 +1036,9 @@ p {
 /* Header */
 .header-bg-container {
 	background-color: #353535;
+	position: sticky;
+	top: 0;
+	z-index: 1;
 }
 
 .header-container {
@@ -1163,7 +1166,7 @@ p {
 	background-color: #9A0808;
 	border-radius: 8px;
 	padding: 0.75rem 1.2rem;
-	width: 75%;
+	width: 100%;
 }
 
 /* Testimonials Section */
@@ -1176,7 +1179,7 @@ p {
 	background-color: #9A0808;
 	border-radius: 8px;
 	padding: 0.75rem 1.2rem;
-	width: 75%;
+	width: 100%;
 }
 
 /* About me Section */
@@ -1190,7 +1193,7 @@ p {
 	background-color: #9A0808;
 	border-radius: 8px;
 	padding: 0.75rem 1.2rem;
-	width: 75%;
+	width: 100%;
 }
 
 /* Location Section */
@@ -1219,7 +1222,7 @@ p {
 	background-color: #9A0808;
 	border-radius: 8px;
 	padding: 0.75rem 1.2rem;
-	width: 75%;
+	width: 100%;
 }
 
 
@@ -1260,45 +1263,88 @@ p {
 .request-button {
 	margin-top: 1.5rem;
 }
+.write-review-button, .back-home-button {
+	margin-top: 1.5rem;
+}
 
 
-.request-button, .catalog-button, .make-a-request-btn, .write-review-button, .back-home-content {
+.request-button, .catalog-button, .make-a-request-btn, .write-review-button, .back-home-button{
 	margin-bottom: 1.5rem;
 	display: block;
 	color: #FEFEFE;
 	background-color: #9A0808;
 	border-radius: 8px;
 	padding: 0.75rem 1.2rem;
-	width: 75%;
+	width: 100%;
 }
+
+/* Testimonials */
+.inner-container{
+	padding: 0 1rem;
+ }
+
+ .glsr-reviews,
+ .glsr-reviews-wrap {
+	display: flex;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.glsr-review {
+	background-color: #F2F2F2;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	padding: 1rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	height: 20rem;
+}
+
+/* This container is relative used for positioning the decor on top of the testimonials content*/
+.content-testimonials{
+	position: relative;
+    width: 100%;
+}
+
+/* This is the container for the decor itself and it is used as a background image and positioned absolute. */
+.testimonials-decor {
+	margin-top: 2rem;
+	position: absolute;
+    top: -7%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+    width: 100%;
+    height: 100%;
+	background-image: url('http://www.benishaanand.ca/double-a-engraving/wp-content/uploads/2024/03/testimonial-decor.svg');
+	background-size: 2rem;
+	background-repeat: no-repeat;
+	background-position: center top;
+	z-index: 0;
+}
+
+
+
+
 
 
 /** CSS written by Jerry */
 
-/*Testimonials section */
-.testimonials-scroll {
-	/* Change 'auto' to 'scroll' */
-   
-   
-}
+/*Testimonials */
 
-.glsr {
-   padding: 1rem 0rem;
-}
-
-.glsr-reviews,
+/* .glsr-reviews,
 .glsr-reviews-wrap {
    display: flex !important;
-   flex-wrap: nowrap; /* Add this line to prevent wrapping */
+   flex-wrap: nowrap;
    flex-direction: column;
    
-}
-.glsr-review{
+} */
+/* .glsr-review{
    background-color: #F2F2F2;
    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
    border-radius: 8px;
    padding: 1rem;
-}
+} */
 
 /* for some reason on my own page, the link text is not white so i need to manually change it with this CSS
 ignore otherwise */
