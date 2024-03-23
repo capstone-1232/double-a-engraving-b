@@ -29,24 +29,24 @@ get_header();
             }
             ?>
         </div>
-        <div>
-            <?php
-            while (have_posts()) :
-                the_post();
-
-                get_template_part('template-parts/content', 'products');
-
+        <div class="product-flex-container">
+                <?php
+                while (have_posts()) :
+                    the_post();
+                    ?>
+                        <?php
+                        get_template_part('template-parts/content', 'products');
+                        ?>
+                <?php
                 endwhile;
 
                 the_posts_navigation();
                 else :
                     echo "No posts found";
                 endif;
-                ?>  
-        </div>
-        <div class="make-a-request-btn">
-        <a>Make a Request</a>
-        </div>
+                ?>
+            </div>
+        <a class="make-a-request-btn">Make a Request</a>
         </div>
     </section>
    

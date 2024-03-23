@@ -10,7 +10,7 @@
         echo '<a href="' . $product_link . '">' . wp_get_attachment_image($image, 'front-thumb', false, ['alt' => $alt]) .  '</a>';
         echo '</div>';
         echo '<div class="product-title">';
-        echo '<h2>' . $productname . '</h2>';
+        echo '<p>' . $productname . '</p>';
         echo '</div>';
     }
     ?>
