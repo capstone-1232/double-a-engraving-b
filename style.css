@@ -463,7 +463,7 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #FEFEFE;
+	background: #FEFEFE !important;
 	font-size: 100%;
 	font-size: clamp(1.2rem, 1.1543rem + 0.2286vw, 1.4rem);
 	line-height: 1.5rem;
@@ -1004,7 +1004,6 @@ textarea {
 }
 
 /* Typography */
-
 h1 {
 	font-family: "Arvo", serif;
 	font-weight: 700;
@@ -1018,6 +1017,7 @@ h2 {
 	font-family: "Arvo", serif;
 	font-weight: 700;
 	font-size: clamp(1.8rem, 1.7543rem + 0.2286vw, 2rem);
+	line-height: 3rem;
 }
 
 
@@ -1026,6 +1026,12 @@ h3 {
 	line-height: 3rem;
 	text-align: center;
 	margin: 0;
+}
+
+h4 
+{
+	font-size: clamp(1.3rem, 1.2543rem + 0.2286vw, 1.5rem);
+	line-height: 3rem;
 }
 
 p {
@@ -1097,17 +1103,19 @@ p {
 	background-blend-mode: multiply;
 	background-size:cover;
 	background-repeat: no-repeat;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 }
 
 .banner-container h1 {
 	color: #FEFEFE;
-	margin-top:0;
+	margin-top: 0;
+	margin-bottom: 1.5rem;
 }
 
 .banner-container p {
 	color: #FEFEFE;
+	margin-bottom: 1.5rem;
 }
 
 .banner-area img {
@@ -1120,12 +1128,13 @@ p {
 	border-radius: 8px;
 	padding: 0.75rem 1.2rem;
 	width: 75%;
-
+	margin-top: 1.5rem;
 }
 
 /* Catalog Section */
 .catalog-container {
 	padding: 0 1rem;
+	margin-bottom: 3rem;
 }
 
 .catalog-flex-container {
@@ -1172,6 +1181,7 @@ p {
 /* Testimonials Section */
 .testimonials-container {
 	padding: 0 1rem;
+	margin-bottom: 3rem;
 }
 
 .view-testimonials-button {
@@ -1186,6 +1196,16 @@ p {
 
 .about-me-section {
 	padding: 0 1rem;
+	margin-bottom: 3rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.allan-anderson-pic-container img {
+	border-radius: 60%;
+	flex: 1 0 50%;
+	margin: 0 auto;
+	margin-top: 1.5rem;
 }
 
 .about-me-button {
@@ -1199,6 +1219,7 @@ p {
 /* Location Section */
 .location-container {
 	padding: 0 1rem;
+	margin-bottom: 3rem;
 }
 
 
@@ -1236,24 +1257,58 @@ p {
 	margin-top: 1.5rem;
 }
 
-.forminator-select.forminator-select-dropdown-container--open .forminator-select-dropdown .select2-results .select2-results__options {
-	z-index: 1;
-	background-color: #fefefe;
-	max-height:max-content;
+.glsr-default form.glsr-form label.glsr-label {
+	font-size: clamp(1.2rem, 1.1543rem + 0.2286vw, 1.4rem) !important;
+	line-height: 1.5rem !important;
+	font-weight: bold !important;
+	margin-bottom: 0.75rem !important;
 }
 
-.forminator-select.forminator-select-dropdown-container--open .forminator-select-dropdown.forminator-dropdown--default {
-	padding: 0;
+.glsr-default .glsr-field {
+	margin-bottom: 1.5rem;
 }
 
-.forminator-select.forminator-select-dropdown-container--open .forminator-select-dropdown .select2-results .select2-results__options .select2-results__option {
-	z-index: 1;
+.glsr-default button.glsr-button {
+	margin-bottom: 1.5rem;
+	display: block;
+	color: #FEFEFE;
+	background-color: #9A0808;
+	border-radius: 8px;
+	padding: 0.75rem 1.2rem;
+	width: 100%;
+}
+
+.glsr-default form.glsr-form textarea.glsr-textarea {
+	border-radius: 10px !important;
+	border-width: 2px !important;
+}
+.glsr-default form.glsr-form input.glsr-input {
+	border-radius: 7px !important; 
+	border-width: 2px !important;
 }
 
 /* Single Product Page */
 
+.product {
+	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+	margin-bottom: 3rem;
+}
+
 .product-content h1 {
 	margin-bottom: 1.5rem;
+}
+
+.product-content h2 {
+	margin-top: 0;
+	padding: 0 1rem;
+}
+
+.product-content p {
+	padding: 0 1rem;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 1.5rem;
 }
 
 .product-content img {
@@ -1285,21 +1340,19 @@ p {
 
  .glsr-reviews, .glsr-reviews-wrap  {
 	display: flex !important;
-    overflow: scroll;
-    scrollbar-width: none;
-	justify-content: space-evenly;
-   
+	flex-direction: column;
+	justify-content: stretch;
+	align-items: start;
+	gap: 1.5rem !important;
+	margin-bottom: 1.5rem;
 }
 
 .glsr-review {
-	background-color: #F2F2F2;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	padding: 1rem;
 	margin-top: 1.5rem;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
-	height: 25rem;
-	flex: 0 0 100%;
+	display: flex;
+    flex-direction: column;
 }
 
 /* This container is relative used for positioning the decor on top of the testimonials content*/
@@ -1312,7 +1365,7 @@ p {
 .testimonials-decor {
 	margin-top: 2rem;
 	position: absolute;
-    top: -4%;
+    top: -3%;
 	left: 0;
 	right: 0;
 	margin-left: auto;
@@ -1326,6 +1379,63 @@ p {
 	z-index: 0;
 }
 
+.glsr-default .glsr-review-author {
+	font-style: italic;
+	margin-top: auto;
+    align-self: flex-end;
+}
+
+/* About Me Page */
+.about-flex-container {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.about-flex-container img {
+	border-radius: 60%;
+	margin: 0 auto;
+	margin-top: 1.5rem;
+}
+
+/* Specific Category Page */
+
+.product-flex-container {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 1rem;
+}
+
+.product-card {
+	flex: 1 0 48%;
+	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+	margin-bottom: 1.5rem;
+}
+
+.product-image img {
+	flex: 1 0 100%;
+	border-radius: 8px;
+}
+
+.product-title p{
+	font-size: clamp(1.3rem, 1.2636rem + 0.1818vw, 1.4rem);
+	line-height: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+/* Contact Information Page */
+.contact-info {
+	margin-bottom: 1.5rem;
+}
+
+
+
 /** CSS written by Jerry */
 
 /*Testimonials */
@@ -1337,12 +1447,12 @@ p {
    flex-direction: column;
    
 } */
-/* .glsr-review{
+.glsr-review{
    background-color: #F2F2F2;
    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
    border-radius: 8px;
    padding: 1rem;
-} */
+}
 
 /* for some reason on my own page, the link text is not white so i need to manually change it with this CSS
 ignore otherwise */

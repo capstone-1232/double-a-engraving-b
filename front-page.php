@@ -23,7 +23,7 @@ get_header();
             <p> Offering affordable, custom laser engravings on a variety of materials.
                 If you imagine it, I create it.</p>
             <div>
-                <button class="call-to-action" type="button">Make a Request</button>
+                <a class="call-to-action" type="button">Make a Request</a>
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@ get_header();
 
 
     <!-- Catalog section -->
-    <article class="py-3">
+    <article>
         <section class="catalog-container">
             <h2>Carved Collections</h2>
             <p>Explore our collection and the versatility of engravings across
@@ -85,10 +85,9 @@ get_header();
     
                 <?php endforeach; ?>
             </div>
-                <button class="view-catalog-button" type="button">View Catalog</button>
-        </article>
-
+                <a class="view-catalog-button" type="button">View Catalog</a>
         </section>
+    </article>
     <!-- end of catalog section -->
     <!-- testimonials section  -->
     <section class="testimonials-container">
@@ -96,8 +95,7 @@ get_header();
         <div class="testimonials">
         <?php echo do_shortcode('[site_reviews hide="date" display="3" assigned_terms="user-testimonials"]') ?>
         </div>
-            <button class="view-testimonials-button" type="button">View Testimonials</button>
-        
+            <a class="view-testimonials-button" type="button">View Testimonials</a>
 
     </section>
     <!-- end of testimonials section -->
@@ -105,15 +103,14 @@ get_header();
     <!-- about me section -->
     <section class="about-me-section">
         <h2> About Me</h2>
-        <div class="">
-            <img src="https://via.placeholder.com/150" alt="Allan Anderson">
-
+        <div class="allan-anderson-pic-container">
+            <img src="http://www.benishaanand.ca/double-a-engraving/wp-content/uploads/2024/03/allan-anderson-pic.webp" alt="Allan Anderson">
         </div>
         <p>I am Allan Anderson, I have been laser engraving since 2022. I work out of my home and sell products at
             various farmers markets around Edmonton.</p>
         <p> It started as a hobby first but after retiring, I turned it into a
             business and it has been awesome.</p>
-            <button class="about-me-button" type="button"> More About Me</button>
+            <a class="about-me-button" type="button"> More About Me</a>
     </section>
     <!-- end of about me section -->
     <!-- location section -->
@@ -130,7 +127,7 @@ get_header();
     <section class="tagline-container">
 
         <p class="tagline-paragraph"> If you imagine it, I create it.</p>
-        <button class="tagline-button" type="button"> Make a Request</button>
+        <a class="tagline-button" type="button"> Make a Request<a>
 
     </section>
 </main><!-- #main -->

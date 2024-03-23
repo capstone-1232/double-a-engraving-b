@@ -16,9 +16,7 @@ get_header();
     <div class="inner-container">
 
         <div class="product-content">
-            <h1>
-                <?php the_title(); ?>
-            </h1>
+            <h1>Product Details</h1>
     
             <article class="product">
         
@@ -31,9 +29,9 @@ get_header();
                     }
                     ?>
                 </div>
-        
+                <h2><?php the_title(); ?></h2>
                 <div class="product-description">
-                    <?php the_field('product_description'); ?>
+                    <p><?php the_field('product_description'); ?></p>
                 </div>
             </article>
         

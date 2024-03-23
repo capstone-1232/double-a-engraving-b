@@ -20,8 +20,8 @@ get_header();
 
     <section>
      <div class="inner-container">
-         <article>
-             <h1 class="text-white pt-4">Contact Information</h1>
+         <article class="contact-info">
+             <h1>Contact Information</h1>
              <p>If you want to contact me for questions about my services or inquiries that aren’t for a custom engraving order, feel free to find me in-person or fill out the form below.</p>
          </article>
 
