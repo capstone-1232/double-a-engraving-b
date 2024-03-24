@@ -23,13 +23,13 @@ get_header();
             <p> Offering affordable, custom laser engravings on a variety of materials.
                 If you imagine it, I create it.</p>
             <div>
-                <a class="call-to-action" type="button">Make a Request</a>
+                <a class="call-to-action" href="<?php echo esc_url(home_url('/'));?>custom-request" type="button">Make a Request</a>
             </div>
         </div>
     </div>
 </section>
 <!-- end of hero section -->
-<main id="primary" class="site-main container-fluid container-lg">
+<main id="primary" class="site-main main-wrapper">
     <!-- fluid until large breakpoint to have a smooth-ish transition as content strethces  -->
 
 
@@ -85,7 +85,7 @@ get_header();
     
                 <?php endforeach; ?>
             </div>
-                <a class="view-catalog-button" type="button">View Catalog</a>
+                <a class="view-catalog-button" href="<?php echo esc_url(home_url('/'));?>catalog" type="button">View Catalog</a>
         </section>
     </article>
     <!-- end of catalog section -->
@@ -93,9 +93,9 @@ get_header();
     <section class="testimonials-container">
         <h2>Testimonials</h2>
         <div class="testimonials">
-        <?php echo do_shortcode('[site_reviews hide="date" display="3" assigned_terms="user-testimonials"]') ?>
+        <?php echo do_shortcode('[site_reviews hide="date" class="testimonials-decor" display="3" assigned_terms="user-testimonials"]') ?>
         </div>
-            <a class="view-testimonials-button" type="button">View Testimonials</a>
+            <a class="view-testimonials-button" href="<?php echo esc_url(home_url('/'));?>testimonials" type="button">View Testimonials</a>
 
     </section>
     <!-- end of testimonials section -->
@@ -104,13 +104,13 @@ get_header();
     <section class="about-me-section">
         <h2> About Me</h2>
         <div class="allan-anderson-pic-container">
-            <img src="http://www.benishaanand.ca/double-a-engraving/wp-content/uploads/2024/03/allan-anderson-pic.webp" alt="Allan Anderson">
+            <img src="https://karikarij.com/wordpress/wp-content/uploads/2024/03/allan-anderson-pic.webp" alt="Allan Anderson">
         </div>
         <p>I am Allan Anderson, I have been laser engraving since 2022. I work out of my home and sell products at
             various farmers markets around Edmonton.</p>
         <p> It started as a hobby first but after retiring, I turned it into a
             business and it has been awesome.</p>
-            <a class="about-me-button" type="button"> More About Me</a>
+            <a class="about-me-button" href="<?php echo esc_url(home_url('/'));?>about-me" type="button"> More About Me</a>
     </section>
     <!-- end of about me section -->
     <!-- location section -->
@@ -120,6 +120,10 @@ get_header();
         <p>I am available on Saturdays from <u>9:30 AM - 3:00 PM.</u> You can also reach out to me at <u>780-220-9681. </u></p>
         <p> Use the google maps below to get accurate location details.</p>
 
+        <div class="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.0042031659023!2d-113.42576822325653!3d53.53983917234609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a022bdafe5e06b%3A0xaa6dffcfe514a0f!2sCapilano%20Mall!5e0!3m2!1sen!2sca!4v1711235570981!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
     </section>
 
     <!-- end of location section -->
@@ -127,7 +131,7 @@ get_header();
     <section class="tagline-container">
 
         <p class="tagline-paragraph"> If you imagine it, I create it.</p>
-        <a class="tagline-button" type="button"> Make a Request<a>
+        <a class="tagline-button" href="<?php echo esc_url(home_url('/'));?>custom-request" type="button"> Make a Request<a>
 
     </section>
 </main><!-- #main -->

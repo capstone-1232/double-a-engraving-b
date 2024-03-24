@@ -47,6 +47,7 @@ get_header();
             <div class="request-form">
                 <?php dynamic_sidebar('custom-request_form') ?>
             </div>
+            <a class="view-catalog-button" href="<?php echo esc_url(home_url('/'));?>catalog" type="button">Back to Catalog</a>
         </div>
     </section>
     <!-- end of custom engraving request form -->
