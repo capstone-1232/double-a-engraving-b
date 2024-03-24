@@ -289,3 +289,40 @@ function tg_include_custom_post_types_in_archive_pages( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'tg_include_custom_post_types_in_archive_pages' );
+
+
+/* redirects  */
+function cpt_redirects() {
+	if (is_singular('category')) {
+		wp_redirect('https://karikarij.com/wordpress/catalog/', 302);
+		exit;
+	}
+}
+add_action('template_redirect', 'cpt_redirects');
+
+/**
+ * Set the "maxlength" HTML attribute to limit review length to 100 characters
+ * Simply change the number to your desired length.
+ * Paste this in your active theme's functions.php file.
+ * @param array $config
+ * @return array
+ */
+add_filter('site-reviews/config/forms/review-form', function ($config) {
+    if (array_key_exists('content', $config)) {
+        $config['content']['maxlength'] = 100;
+    }
+    return $config;
+});
+
+/**
+ * Limit review length to 100 characters in the form validation
+ * Simply change the number to your desired length.
+ * Paste this in your active theme's functions.php file.
+ * @param array $rules
+ * @return array
+ */
+add_filter('site-reviews/validation/rules', function ($rules) {
+    $rules['content'] = 'required|max:100';
+    return $rules;
+});
+

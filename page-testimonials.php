@@ -13,27 +13,28 @@ get_header();
 
 <main>
     <div class="inner-container">
-        <div class="horizontal-scroll-testimonials">
-            <section class="testimonials-section">
-            <h1><?php the_title(); ?></h1>
-    
+
+        <section class="testimonials-section">
+            <h1>
+                <?php the_title(); ?>
+            </h1>
+
             <article>
                 <p>Read what our customers say about our products and services.</p>
-                <div class="content-testimonials"> 
-                <div class="testimonials-decor"></div>
-                <?php echo do_shortcode('[site_reviews hide="date" display="10" assigned_terms="user-testimonials"]') ?>
-                </div>
-            </article>
-            </section>
-        </div>
 
-        <div class="write-review-button">
-            <a>Write a Review</a>
-            </div>
-            <div class="back-home-button">
-            <a>Back to Home</a>
-            </div>   
-</div>
+
+                <?php echo do_shortcode('[site_reviews pagination="ajax" class="testimonials-decor" hide="date" display="3" assigned_terms="user-testimonials"]') ?>
+
+            </article>
+        </section>
+
+
+        <div class="flex-btn-container">
+            <a href="<?php echo esc_url(home_url('/')); ?>write-a-review" class="write-review-button">Write a Review</a>
+   
+            <a class="back-home-button" href="<?php echo esc_url(home_url('/')); ?>">Back to Home</a>
+        </div>
+    </div>
 </main>
 
 <?php

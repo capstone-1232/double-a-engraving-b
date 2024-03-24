@@ -79,7 +79,7 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-	margin: 0;	
+	margin: 0;
 }
 
 /**
@@ -612,7 +612,7 @@ textarea:focus {
 
 select {
 	border: 1px solid #ccc;
-	
+
 }
 
 textarea {
@@ -667,7 +667,7 @@ textarea {
 .main-navigation ul ul a {
 	display: block;
 	padding: 2rem;
-	
+
 }
 
 .main-navigation ul li:hover>ul,
@@ -694,19 +694,24 @@ textarea {
 	display: block;
 }
 
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 960px) {
 
 	.menu-toggle {
 		display: none;
 	}
 
-	.main-navigation ul {
+	/* this is minor bug-fixing, if the header is open and screen reaches 768px, this
+	 will make sure it still closes the header and displays horizontally */
+	.main-navigation ul,
+	.main-navigation.toggled ul {
 		display: flex;
 	}
 
-	.header-contaienr .mobile-menu-container{
+
+
+	.header-contaienr .mobile-menu-container {
 		/* make the header sticky */
-		
+
 	}
 }
 
@@ -984,6 +989,7 @@ textarea {
 	border-radius: 10px;
 	border-width: 2px;
 }
+
 .forminator-ui.forminator-custom-form[data-design=default] .forminator-input {
 	border-radius: 7px;
 	border-width: 2px;
@@ -1028,8 +1034,7 @@ h3 {
 	margin: 0;
 }
 
-h4 
-{
+h4 {
 	font-size: clamp(1.3rem, 1.2543rem + 0.2286vw, 1.5rem);
 	line-height: 3rem;
 }
@@ -1040,6 +1045,7 @@ p {
 }
 
 /* Header */
+
 .header-bg-container {
 	background-color: #353535;
 	position: sticky;
@@ -1101,7 +1107,7 @@ p {
 	background-color: rgba(0, 0, 0, 0.445);
 	background-image: url("http://www.benishaanand.ca/double-a-engraving/wp-content/uploads/2024/03/banner-image-small.webp");
 	background-blend-mode: multiply;
-	background-size:cover;
+	background-size: cover;
 	background-repeat: no-repeat;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
@@ -1155,7 +1161,7 @@ p {
 }
 
 .category-image a {
-	display:block;
+	display: block;
 	margin: 0;
 	padding: 0;
 }
@@ -1282,8 +1288,9 @@ p {
 	border-radius: 10px !important;
 	border-width: 2px !important;
 }
+
 .glsr-default form.glsr-form input.glsr-input {
-	border-radius: 7px !important; 
+	border-radius: 7px !important;
 	border-width: 2px !important;
 }
 
@@ -1318,12 +1325,18 @@ p {
 .request-button {
 	margin-top: 1.5rem;
 }
-.write-review-button, .back-home-button {
+
+.write-review-button,
+.back-home-button {
 	margin-top: 1.5rem;
 }
 
 
-.request-button, .catalog-button, .make-a-request-btn, .write-review-button, .back-home-button{
+.request-button,
+.catalog-button,
+.make-a-request-btn,
+.write-review-button,
+.back-home-button {
 	margin-bottom: 1.5rem;
 	display: block;
 	color: #FEFEFE;
@@ -1334,15 +1347,16 @@ p {
 }
 
 /* Testimonials */
-.inner-container{
+.inner-container {
 	padding: 0 1rem;
- }
+}
 
- .glsr-reviews, .glsr-reviews-wrap  {
+.glsr-reviews,
+.glsr-reviews-wrap {
 	display: flex !important;
 	flex-direction: column;
 	justify-content: stretch;
-	align-items: start;
+	/* align-items: start; commented out for now, makes short-reviews not fit the container and it doesnt look ideal */
 	gap: 1.5rem !important;
 	margin-bottom: 1.5rem;
 }
@@ -1351,27 +1365,28 @@ p {
 	margin-top: 1.5rem;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
-	display: flex;
-    flex-direction: column;
+	/* display: flex;
+	flex-direction: column;
+	- commented out by jerry, necessary for rating & name to be on same line 
+	 */
 }
 
 /* This container is relative used for positioning the decor on top of the testimonials content*/
-.content-testimonials{
+/* .content-testimonials{
 	position: relative;
     width: 100%;
-}
+	 - commented out by jerry, not used
+} */
 
 /* This is the container for the decor itself and it is used as a background image and positioned absolute. */
-.testimonials-decor {
-	margin-top: 2rem;
+.testimonials-decor .glsr-review::before {
+	content: "";
 	position: absolute;
-    top: -3%;
+	top: -20px;
+	/* Adjust the top position as needed */
 	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100px;
 	background-image: url('http://www.benishaanand.ca/double-a-engraving/wp-content/uploads/2024/03/testimonial-decor.svg');
 	background-size: 2rem;
 	background-repeat: no-repeat;
@@ -1382,7 +1397,7 @@ p {
 .glsr-default .glsr-review-author {
 	font-style: italic;
 	margin-top: auto;
-    align-self: flex-end;
+	align-self: flex-end;
 }
 
 /* About Me Page */
@@ -1418,7 +1433,7 @@ p {
 	border-radius: 8px;
 }
 
-.product-title p{
+.product-title p {
 	font-size: clamp(1.3rem, 1.2636rem + 0.1818vw, 1.4rem);
 	line-height: 1.5rem;
 	font-weight: bold;
@@ -1438,36 +1453,173 @@ p {
 
 /** CSS written by Jerry */
 
-/*Testimonials */
+
+/* .main-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+} */
+
+
+/* START of testimonial card related css  */
 
 /* .glsr-reviews,
 .glsr-reviews-wrap {
    display: flex !important;
    flex-wrap: nowrap;
    flex-direction: column;
-   
+   -- not used, deletable
 } */
-.glsr-review{
-   background-color: #F2F2F2;
-   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
-   border-radius: 8px;
-   padding: 1rem;
+
+
+/* testimonials decoration container basically, so quote icon is placed correctly*/
+.testimonials-decor .glsr-review {
+	background-color: #F2F2F2;
+	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+	padding: 1rem;
+	position: relative;
 }
+
+/* this puts space between the star rating & author */
+.glsr-default .glsr-review {
+	justify-content: space-between;
+	align-content: center;
+}
+
+/* add a dash to author name */
+.glsr-review-author::before {
+	content: "— ";
+}
+
+/*adds padding to the review content, use this for spacing the content from the card itself */
+.glsr-review-content {
+	padding: 1rem;
+}
+
+@media screen and (min-width: 960px) {
+
+	/* if you want to make this target all reviews, remove .testimonials-section 
+	from all the code here. then the landing page and testimonials will have the same
+	layout at desktop view. */
+	.testimonials-section .glsr-reviews{
+		flex-direction: row;
+		
+		
+	}
+	/* this flex makes the cards stay the same size regardless of content
+	31% is needed to fit without making the user scroll */
+	.testimonials-section .glsr-review {
+		flex: 1 0 31%;
+	}
+	/* this flex forces the star rating and author to be on same line regardless
+	of size */
+	.testimonials-section
+	 .glsr-review-rating, 
+	 .glsr-review-author {
+		flex: 1 0 41%;
+
+		
+	}
+
+	.testimonials-section .glsr-review-content{
+		flex: 1 0 100%;
+		margin-bottom: 20px;
+	}
+
+	.flex-btn-container{
+		display: flex;
+	}
+	.flex-btn-container
+	.write-review-button,
+	.back-home-button{
+		width: 33%;
+		text-align: center;
+		margin-right: 10px;		
+		text-decoration: none;
+
+	}
+
+	
+}
+
+
+/* END of testimonials related css */
 
 /* for some reason on my own page, the link text is not white so i need to manually change it with this CSS
 ignore otherwise */
-header a{
-	color: white;
-}
-a:visited{
+header a {
 	color: white;
 }
 
-@media screen and (min-width: 768px) {
-	/* feel free to ignore this min-width, was experimenting */
-   .half-width{
-	   width: 50%;
+a:visited {
+	color: none;
+}
 
-   }
-   
-} 
+/* end of misc */
+
+/* button related css */
+/* get rid of underline from various a/button elements */
+/* .view-catalog-button,
+.view-testimonials-button,
+.about-me-button,
+.make-a-request-btn,
+.call-to-action,
+.tagline-button {
+	text-decoration: none;
+	width: 75%;
+} */
+
+
+/* @media screen and (min-width: 783px) {
+	this is to change the buttons width at a certain view
+	commented out cuz i wasnt suppose to work on this
+	
+	.view-catalog-button,
+	.view-testimonials-button,
+	.about-me-button,
+	.make-a-request-btn,
+	.call-to-action,
+	.tagline-button {
+		text-align: center;
+		width: 33%;
+	}
+
+} */
+
+
+/* nav menu */
+
+/*
+commented since wasn't suppose to be what i work on
+ .nav-menu a {
+	 
+	padding: 1rem 1rem;
+
+} */
+
+/* @media screen and (min-width: 960px) {
+	commented for now since i wasnt suppose to work on this
+	this is desktop nav menu, implements spacing, alignment, and max-width 
+	.main-navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 90px;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+} */
+
+/* end of nav menu section */
+
+/** Landing Page/Home Page desktop queries */
+
+/* @media screen and (min-width: 768px) {
+	commented for now since i wasnt suppose to work on this
+	.catalog-flex-container {
+		this changes the catalog flex to a row, so it displays 4 in a row
+		flex-wrap: nowrap;
+
+	}
+
+} */
