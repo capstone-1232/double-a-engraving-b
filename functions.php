@@ -193,6 +193,7 @@ function doubleaengraving_widgets_init()
 			'after_title' => '</h3>',
 		)
 	);
+
 }
 add_action('widgets_init', 'doubleaengraving_widgets_init');
 

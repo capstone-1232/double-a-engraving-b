@@ -119,6 +119,8 @@ pre {
  */
 a {
 	background-color: transparent;
+	text-decoration: underline;
+	text-align: center;
 }
 
 /**
@@ -1155,7 +1157,7 @@ p {
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
-.category-image img {
+.category-image img, .category-thumb {
 	width: 100%;
 	display: block;
 }
@@ -1449,10 +1451,26 @@ p {
 	margin-bottom: 1.5rem;
 }
 
+/* Catalog Page */
+.swiper-wrapper {
+	z-index: 0;
+}
+
+.catalog-carousel {
+	margin-top: 3rem;
+}
+
+.catalog-content h1 {
+	padding: 0 1rem;
+}
+
+.catalog-content p {
+	margin-top: 0;
+}
+
 
 
 /** CSS written by Jerry */
-
 
 /* .main-wrapper {
 	max-width: 1200px;
