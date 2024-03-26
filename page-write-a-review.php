@@ -18,25 +18,24 @@ get_header();
 
 <main class="write-a-review-main">
     <!-- start of write a review information -->
-    <section>
-        <div class="inner-container">
-            <div class="write-a-review-content">
-                <h1>Write a Review</h1>
-                <p>
-                    Your review matters to us a lot! Your time is appreciated.
-                </p>
-                <p>Thank you!</p>
-            </div>
-        </div>
-    </section>
+
+    <div class="inner-container">
+        <section class="write-a-review-content">
+            <h1>Write a Review</h1>
+            <p>
+                Your review matters to us a lot! Your time is appreciated.
+            </p>
+            <p>Thank you!</p>
+        </section>
+    </div>
+
     <!-- end of write a review information -->
 
     <!-- start of review form -->
-        <article>
-            <div class="review-form inner-container">
-                <?php echo do_shortcode('[site_reviews_form class="half-width" assigned_terms="user-testimonials"]')  ?>
-            </div>
-        </article>
+
+    <div class="review-form inner-container">
+        <?php echo do_shortcode('[site_reviews_form class="half-width" assigned_terms="user-testimonials"]') ?>
+    </div>
     <!-- end of review form -->
 
 </main>

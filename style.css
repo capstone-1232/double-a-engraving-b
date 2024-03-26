@@ -1157,7 +1157,8 @@ p {
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
-.category-image img, .category-thumb {
+.category-image img,
+.category-thumb {
 	width: 100%;
 	display: block;
 }
@@ -1298,7 +1299,8 @@ p {
 
 /* Single Product Page */
 
-.product {
+/*renamed -produt to product-card for clarity: jerry */
+.product-card {
 	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
 	border-radius: 8px;
 	margin-bottom: 3rem;
@@ -1472,9 +1474,15 @@ p {
 
 /** CSS written by Jerry */
 
-/* .main-wrapper {
+/*temporary max-width wrapper for my pages, we could use this for all pages
+but i'll leave it for now until we discuss it*/
+.temp-wrapper {
 	max-width: 1200px;
 	margin: 0 auto;
+}
+
+/* .page-header{
+	padding: 0 1rem
 } */
 
 
@@ -1519,49 +1527,102 @@ p {
 	/* if you want to make this target all reviews, remove .testimonials-section 
 	from all the code here. then the landing page and testimonials will have the same
 	layout at desktop view. */
-	.testimonials-section .glsr-reviews{
+	.testimonials-section .glsr-reviews {
 		flex-direction: row;
-		
-		
+
+
 	}
+
 	/* this flex makes the cards stay the same size regardless of content
 	31% is needed to fit without making the user scroll */
 	.testimonials-section .glsr-review {
 		flex: 1 0 31%;
 	}
+
 	/* this flex forces the star rating and author to be on same line regardless
 	of size */
-	.testimonials-section
-	 .glsr-review-rating, 
-	 .glsr-review-author {
+	.testimonials-section .glsr-review-rating,
+	.glsr-review-author {
 		flex: 1 0 41%;
 
-		
+
 	}
 
-	.testimonials-section .glsr-review-content{
+	.testimonials-section .glsr-review-content {
 		flex: 1 0 100%;
 		margin-bottom: 20px;
 	}
 
-	.flex-btn-container{
+	.flex-btn-container {
 		display: flex;
 	}
-	.flex-btn-container
-	.write-review-button,
-	.back-home-button{
+
+	.flex-btn-container .write-review-button,
+	.back-home-button {
 		width: 33%;
 		text-align: center;
-		margin-right: 10px;		
+		margin-right: 10px;
 		text-decoration: none;
 
 	}
 
-	
+
 }
 
 
 /* END of testimonials related css */
+
+/* START of about me section related CSS */
+
+@media screen and (min-width: 860px) {
+
+	/* media query for when the page will go desktop view */
+	.about-flex-container {
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+
+
+}
+
+/** END of about me section related CSS */
+
+/* START of contact info page related CSS */
+
+.google-map {
+	max-width: 800px;
+
+	height: 100%;
+}
+
+
+
+@media screen and (min-width: 860px) {
+
+	/* media query for when the page will go desktop view */
+	
+	.contact-flex{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.contact-info {
+		flex: 0 1 51%;
+	}
+
+	.contact-form {
+		flex: 0 1 51%;
+	}
+
+	.google-map {
+		flex: 1 1 20%;
+		margin-left: 2rem;
+		order: 2;
+		height: 600px;
+	}
+}
+
+/* END of contact info page related CSS */
 
 /* for some reason on my own page, the link text is not white so i need to manually change it with this CSS
 ignore otherwise */
