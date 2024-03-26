@@ -14,7 +14,7 @@ get_header();
 <main class="catalog-main catalog-content">
 
     <h1>
-        <?php the_title(); ?>
+        Our Catalog
 
     </h1>
 
@@ -32,7 +32,7 @@ get_header();
     
         <!-- Catalog section -->
         <!-- the gallery class will use breakpoints to display 2x2 on mobile and 4x4 on larger screens -->
-        <article class="catalog-flex-container">
+        <section class="catalog-flex-container">
             <?php foreach (get_categories() as $cat): ?>
                 <!-- create a card to contain the category image and name -->
                 <div class="category-card">
@@ -68,7 +68,7 @@ get_header();
                 </div>
     
             <?php endforeach; ?>
-        </article>
+        </section>
         <!-- End of Catalog section -->
 
     </div>

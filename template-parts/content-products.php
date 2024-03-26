@@ -1,4 +1,4 @@
-<div class="product-card">
+<article class="product-card">
     <!-- create a container to display all products relevant to the category -->
     <?php
     $image = get_field('product_image');
@@ -17,4 +17,4 @@
 
     
 
-</div>
+</article>

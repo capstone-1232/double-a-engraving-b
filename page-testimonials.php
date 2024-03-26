@@ -11,27 +11,30 @@
 get_header();
 ?>
 
-<main>
+<main class="temp-wrapper">
     <div class="inner-container">
 
+        
         <section class="testimonials-section">
             <h1>
-                <?php the_title(); ?>
+                Customer Testimonials
             </h1>
 
-            <article>
-                <p>Read what our customers say about our products and services.</p>
+            <p>Read what our customers say about our products and services.</p>
 
+            <!-- section that contains each customer testimonial -->
+            <section class="testimonials">
 
                 <?php echo do_shortcode('[site_reviews pagination="ajax" class="testimonials-decor" hide="date" display="3" assigned_terms="user-testimonials"]') ?>
 
-            </article>
+            </section>
+            <!-- end of section that contains each customer testimonial -->
         </section>
 
 
         <div class="flex-btn-container">
             <a href="<?php echo esc_url(home_url('/')); ?>write-a-review" class="write-review-button">Write a Review</a>
-   
+
             <a class="back-home-button" href="<?php echo esc_url(home_url('/')); ?>">Back to Home</a>
         </div>
     </div>

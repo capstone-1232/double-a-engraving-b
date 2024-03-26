@@ -15,35 +15,39 @@ get_header();
 
     <div class="inner-container">
 
-        <div class="product-content">
+        <section class="product-content">
             <h1>Product Details</h1>
-    
-            <article class="product">
-        
+
+            <article class="product-card">
+
                 <div class="product-image">
                     <?php
-        
+
                     $image = get_field('product_image');
                     if ($image) {
                         echo wp_get_attachment_image($image, 'full');
                     }
                     ?>
                 </div>
-                <h2><?php the_title(); ?></h2>
-                <div class="product-description">
-                    <p><?php the_field('product_description'); ?></p>
-                </div>
+                <h2>
+                    <?php the_title(); ?>
+                </h2>
             </article>
-        
+            <div class="product-description">
+                <p>
+                    <?php the_field('product_description'); ?>
+                </p>
+            </div>
             <div class="request-button">
                 <a>Make A Request</a>
             </div>
-        
+
             <div class="catalog-button">
                 <a>Back to Catalog</a>
             </div>
+        </section>
 
-        </div>
+
     </div>
 
 
