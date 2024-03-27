@@ -15,8 +15,8 @@ get_header();
 
     <div class="inner-container">
 
+        <h1>Product Details</h1>
         <section class="product-content">
-            <h1>Product Details</h1>
 
             <article class="product-card">
 
@@ -37,13 +37,13 @@ get_header();
                 <p>
                     <?php the_field('product_description'); ?>
                 </p>
-            </div>
-            <div class="request-button">
-                <a>Make A Request</a>
-            </div>
+                <div class="request-button">
+                    <a>Make A Request</a>
+                </div>
 
-            <div class="catalog-button">
-                <a>Back to Catalog</a>
+                <div class="catalog-button">
+                    <a>Back to Catalog</a>
+                </div>
             </div>
         </section>
 

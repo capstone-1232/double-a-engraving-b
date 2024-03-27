@@ -696,7 +696,7 @@ textarea {
 	display: block;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1030px) {
 
 	.menu-toggle {
 		display: none;
@@ -1624,6 +1624,44 @@ but i'll leave it for now until we discuss it*/
 
 /* END of contact info page related CSS */
 
+/* START of product details related CSS */
+
+/*provides some spacing on the h1 inside product details. this is because
+i had to take the h1 outside of the section to make the flexbox work */
+.single-product-entry h1{
+
+	margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 860px) {
+
+	/* media query for when the page will go desktop view */
+	.product-content {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.product-card {
+		flex: 1 1 50%;
+	}
+
+	.product-description {
+		flex: 1 0 50%;
+		padding-left: 4rem;
+	}
+
+	.product-content .request-button {
+		width: 77%;
+		
+	}
+
+	.product-content .catalog-button {
+		width: 77%;
+	}
+
+}
+
+
 /* for some reason on my own page, the link text is not white so i need to manually change it with this CSS
 ignore otherwise */
 header a {
@@ -1668,17 +1706,17 @@ a:visited {
 
 /* nav menu */
 
-/*
-commented since wasn't suppose to be what i work on
+
+/* commented since wasn't suppose to be what i work on */
  .nav-menu a {
 	 
 	padding: 1rem 1rem;
 
-} */
+}
 
-/* @media screen and (min-width: 960px) {
-	commented for now since i wasnt suppose to work on this
-	this is desktop nav menu, implements spacing, alignment, and max-width 
+@media screen and (min-width: 1030px) {
+	/* commented for now since i wasnt suppose to work on this
+	this is desktop nav menu, implements spacing, alignment, and max-width  */
 	.main-navigation {
 		display: flex;
 		justify-content: space-between;
@@ -1687,7 +1725,7 @@ commented since wasn't suppose to be what i work on
 		max-width: 1200px;
 		margin: 0 auto;
 	}
-} */
+}
 
 /* end of nav menu section */
 
