@@ -119,8 +119,9 @@ pre {
  */
 a {
 	background-color: transparent;
-	text-decoration: underline;
+	text-decoration: none;
 	text-align: center;
+	display: block;
 }
 
 /**
@@ -1423,6 +1424,7 @@ p {
 	display: flex;
 	justify-content: space-evenly;
 	gap: 1rem;
+	margin-top: 1.5rem;
 }
 
 .product-card {
@@ -1434,7 +1436,8 @@ p {
 
 .product-image img {
 	flex: 1 0 100%;
-	border-radius: 8px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
 }
 
 .product-title p {
@@ -1443,6 +1446,7 @@ p {
 	font-weight: bold;
 	text-align: center;
 	margin: 0;
+	padding-top: 1.5rem;
 	padding-left: 1rem;
 	padding-right: 1rem;
 	margin-bottom: 1.5rem;
@@ -1468,6 +1472,85 @@ p {
 
 .catalog-content p {
 	margin-top: 0;
+}
+
+@media screen and (min-width: 1200px) {
+
+	/* Landing Page */
+	.banner-content,
+	.catalog-container,
+	.testimonials-container,
+	.about-me-section,
+	.location-container,
+	.tagline-container
+	 {
+		max-width: 1200px;
+		margin: 0 auto;
+		margin-bottom: 4.5rem;
+	}
+
+	.catalog-flex-container {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 1rem;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.about-me-flex-container {
+		display: flex;
+		gap: 1rem;
+		justify-content: space-evenly;
+	}
+
+	.allan-anderson-pic-container img {
+		flex: 1 0 75%;
+	}
+
+	.about-me-content {
+		flex: 1 0 50%;
+	}
+
+	.call-to-action,
+	.view-catalog-button,
+	.view-testimonials-button,
+	.tagline-button {
+		width: 25%;
+	}
+
+	.about-me-button {
+		width: 50%;
+	}
+
+	.location-container {
+		display: flex;
+		justify-content: space-evenly;
+		gap: 1rem;
+	}
+
+	.location-content {
+		flex: 1 0 20%;
+	}
+
+	.google-map {
+		max-width: 50%;
+		margin-top: 3rem;
+	}
+
+	.tagline-container {
+		text-align: center;
+		margin-top: 0;
+	}
+
+	.tagline-button {
+		margin: 0 auto;
+	}
+
+	.location-container {
+		margin-bottom: 0;
+	}
+
+
 }
 
 
@@ -1527,7 +1610,7 @@ but i'll leave it for now until we discuss it*/
 	/* if you want to make this target all reviews, remove .testimonials-section 
 	from all the code here. then the landing page and testimonials will have the same
 	layout at desktop view. */
-	.testimonials-section .glsr-reviews {
+	.glsr-reviews {
 		flex-direction: row;
 
 
@@ -1535,20 +1618,20 @@ but i'll leave it for now until we discuss it*/
 
 	/* this flex makes the cards stay the same size regardless of content
 	31% is needed to fit without making the user scroll */
-	.testimonials-section .glsr-review {
+	.glsr-review {
 		flex: 1 0 31%;
 	}
 
 	/* this flex forces the star rating and author to be on same line regardless
 	of size */
-	.testimonials-section .glsr-review-rating,
+	.glsr-review-rating,
 	.glsr-review-author {
 		flex: 1 0 41%;
 
 
 	}
 
-	.testimonials-section .glsr-review-content {
+	.glsr-review-content {
 		flex: 1 0 100%;
 		margin-bottom: 20px;
 	}
@@ -1668,15 +1751,15 @@ a:visited {
 
 /* nav menu */
 
-/*
-commented since wasn't suppose to be what i work on
+
+/* commented since wasn't suppose to be what i work on */
  .nav-menu a {
 	 
 	padding: 1rem 1rem;
 
-} */
+}
 
-/* @media screen and (min-width: 960px) {
+@media screen and (min-width: 960px) {
 	commented for now since i wasnt suppose to work on this
 	this is desktop nav menu, implements spacing, alignment, and max-width 
 	.main-navigation {
@@ -1687,7 +1770,7 @@ commented since wasn't suppose to be what i work on
 		max-width: 1200px;
 		margin: 0 auto;
 	}
-} */
+}
 
 /* end of nav menu section */
 
