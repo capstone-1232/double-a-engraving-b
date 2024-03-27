@@ -1005,7 +1005,6 @@ textarea {
 .forminator-button {
 	display: block;
 	color: #FEFEFE;
-	background-color: #9A0808;
 	border-radius: 8px;
 	padding: 0.75rem 1.2rem;
 	width: 75%;
@@ -1548,6 +1547,27 @@ p {
 
 	.location-container {
 		margin-bottom: 0;
+	}
+
+	/* Custom Request Page */
+	.custom-request-content {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.custom-request-flex-container {
+		display: flex;
+		gap: 1rem;
+		justify-content: space-evenly;
+		align-items: start;
+	}
+
+	.custom-request-flex-container section {
+		flex: 1 0 48%;
+	}
+
+	.custom-request-flex-container section:nth-child(2) {
+		margin-top: 1.5rem;
 	}
 
 
