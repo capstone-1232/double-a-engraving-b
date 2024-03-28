@@ -1145,14 +1145,15 @@ p {
 	margin-bottom: 3rem;
 }
 
-.catalog-flex-container {
+.catalog-container .catalog-flex-container {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 10px;
+	justify-content: space-evenly;
+	gap: 1rem;
 }
 
-.category-card {
-	flex-basis: calc(50% - 10px);
+.catalog-container .category-card {
+	flex: 1 0 46%;
 	margin-bottom: 20px;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -1473,6 +1474,17 @@ p {
 	margin-top: 0;
 }
 
+.catalog-content .catalog-flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 1rem;
+}
+
+.catalog-content .category-card {
+	flex: 1 0 46%;
+}
+
 @media screen and (min-width: 1200px) {
 
 	/* Landing Page */
@@ -1481,19 +1493,28 @@ p {
 	.testimonials-container,
 	.about-me-section,
 	.location-container,
-	.tagline-container
+	.tagline-container,
+	.catalog-content .catalog-carousel,
+	.catalog-content .inner-container,
+	.catalog-content h1
 	 {
 		max-width: 1200px;
 		margin: 0 auto;
 		margin-bottom: 4.5rem;
 	}
 
-	.catalog-flex-container {
-		display: flex;
+	.catalog-content h1 {
+		margin-bottom: 2rem;
+	}
+
+	.catalog-container .catalog-flex-container {
 		flex-wrap: nowrap;
-		gap: 1rem;
 		justify-content: space-evenly;
 		align-items: center;
+	}
+
+	.catalog-container .category-card {
+		flex: 0 0 23%;
 	}
 
 	.about-me-flex-container {
@@ -1568,6 +1589,16 @@ p {
 
 	.custom-request-flex-container section:nth-child(2) {
 		margin-top: 1.5rem;
+	}
+
+	/* Catalog Page */
+
+	.catalog-content .catalog-flex-container {
+		flex-wrap: wrap;
+	}
+
+	.catalog-content .category-card {
+		flex: 1 0 22%;
 	}
 
 
