@@ -11,12 +11,12 @@ get_header();
 
 ?>
 
-<main class="single-product-entry">
+<main class="single-product-entry temp-wrapper">
 
     <div class="inner-container">
 
-        <h1>Product Details</h1>
         <section class="product-content">
+            <h1>Product Details</h1>
 
             <article class="product-card">
 

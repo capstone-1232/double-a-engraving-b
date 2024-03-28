@@ -1736,30 +1736,38 @@ i had to take the h1 outside of the section to make the flexbox work */
 	margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 860px) {
+.single-product-entry .product-card{
+	flex: 1 0 50%;
+}
+
+.product-content .request-button {
+	width: 77%;
+	
+}
+
+.product-content .catalog-button {
+	width: 77%;
+}
+
+@media screen and (min-width: 760px) {
 
 	/* media query for when the page will go desktop view */
-	.product-content {
+	.single-product-entry .product-content {
 		display: flex;
 		flex-wrap: wrap;
 	}
 
-	.product-card {
+	.single-product-entry h1{
+		flex: 1 0 100%;
+	}
+
+	.single-product-entry > .product-card {
 		flex: 1 1 50%;
 	}
 
 	.product-description {
 		flex: 1 0 50%;
 		padding-left: 4rem;
-	}
-
-	.product-content .request-button {
-		width: 77%;
-		
-	}
-
-	.product-content .catalog-button {
-		width: 77%;
 	}
 
 }
