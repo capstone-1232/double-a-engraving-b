@@ -1108,12 +1108,24 @@ p {
 .banner-container {
 	padding: 0 1rem;
 	background-color: rgba(0, 0, 0, 0.445);
-	background-image: url("http://www.benishaanand.ca/double-a-engraving/wp-content/uploads/2024/03/banner-image-small.webp");
+	background-image: url("https://karikarij.com/wordpress/wp-content/uploads/2024/04/engravingbanner850px.webp");
 	background-blend-mode: multiply;
+	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
+	
+	
+}
+
+@media screen and (min-width: 850px) {
+	.banner-container{
+		background-image: url(https://karikarij.com/wordpress/wp-content/uploads/2024/04/engravingerbanner1400px.webp) ;
+		height: calc(100vh - 30rem)
+		;	
+	}
+	
 }
 
 .banner-container h1 {
@@ -1423,13 +1435,14 @@ p {
 
 .product-flex-container {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content:flex-start;
 	gap: 1rem;
 	margin-top: 1.5rem;
 }
 
 .product-flex-container .product-card {
-	flex: 1 0 48%;
+	flex: 0 0 46%;
 	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
 	border-radius: 8px;
 	margin-bottom: 1.5rem;
@@ -1478,12 +1491,12 @@ p {
 .catalog-content .catalog-flex-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 	gap: 1rem;
 }
 
 .catalog-content .category-card {
-	flex: 1 0 46%;
+	flex: 0 0 48%;
 }
 
 @media screen and (min-width: 800px) {
