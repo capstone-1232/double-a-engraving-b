@@ -149,7 +149,7 @@ get_header();
 
         <p class="tagline-paragraph"> If you imagine it, I create it.</p>
         <a class="tagline-button" href="<?php echo esc_url(home_url('/')); ?>custom-request" type="button"> Make a
-            Request<a>
+            Request</a>
 
     </section>
 </main><!-- #main -->

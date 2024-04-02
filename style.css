@@ -1085,6 +1085,7 @@ p {
 	margin: 0 auto;
 	padding: 1rem;
 	margin-top: 3rem;
+	max-width: 1200px; /*added by jerry because the previous max-width caused the footer to have a margin-bottom of 4.5rem */
 }
 
 .social-icons {
@@ -1107,12 +1108,24 @@ p {
 .banner-container {
 	padding: 0 1rem;
 	background-color: rgba(0, 0, 0, 0.445);
-	background-image: url("http://www.benishaanand.ca/double-a-engraving/wp-content/uploads/2024/03/banner-image-small.webp");
+	background-image: url("https://karikarij.com/wordpress/wp-content/uploads/2024/04/engravingbanner850px.webp");
 	background-blend-mode: multiply;
+	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
+	
+	
+}
+
+@media screen and (min-width: 850px) {
+	.banner-container{
+		background-image: url(https://karikarij.com/wordpress/wp-content/uploads/2024/04/engravingerbanner1400px.webp) ;
+		height: calc(100vh - 30rem)
+		;	
+	}
+	
 }
 
 .banner-container h1 {
@@ -1422,13 +1435,14 @@ p {
 
 .product-flex-container {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content:flex-start;
 	gap: 1rem;
 	margin-top: 1.5rem;
 }
 
 .product-flex-container .product-card {
-	flex: 1 0 48%;
+	flex: 0 0 46%;
 	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
 	border-radius: 8px;
 	margin-bottom: 1.5rem;
@@ -1477,12 +1491,12 @@ p {
 .catalog-content .catalog-flex-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 	gap: 1rem;
 }
 
 .catalog-content .category-card {
-	flex: 1 0 46%;
+	flex: 0 0 48%;
 }
 
 @media screen and (min-width: 800px) {
@@ -1579,7 +1593,6 @@ p {
 	.catalog-content .inner-container,
 	.specific-product-archive .inner-container,
 	.catalog-content h1,
-	.footer-container,
 	.social-icons
 	 {
 		max-width: 1200px;
@@ -1812,15 +1825,34 @@ i had to take the h1 outside of the section to make the flexbox work */
 	margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 860px) {
+.single-product-entry .product-card{
+	flex: 1 0 50%;
+}
+
+.product-content .request-button {
+	width: 77%;
+	
+}
+
+.product-content .catalog-button {
+	width: 77%;
+}
+
+.single-product-entry .product-description{}
+
+@media screen and (min-width: 760px) {
 
 	/* media query for when the page will go desktop view */
-	.product-content {
+	.single-product-entry .product-content {
 		display: flex;
 		flex-wrap: wrap;
 	}
 
-	.product-card {
+	.single-product-entry h1{
+		flex: 1 0 100%;
+	}
+
+	.single-product-entry > .product-card {
 		flex: 1 1 50%;
 	}
 
@@ -1829,16 +1861,30 @@ i had to take the h1 outside of the section to make the flexbox work */
 		padding-left: 4rem;
 	}
 
-	.product-content .request-button {
-		width: 77%;
-		
-	}
+}
 
-	.product-content .catalog-button {
-		width: 77%;
-	}
+/** END of product details related CSS */
+
+/** START of Write a review related CSS */
+
+
+
+.write-a-review-main .glsr-default button.glsr-button {
+	width: 77% ;
+	display: block !important;
 
 }
+@media screen and (min-width: 768px){
+	.write-a-review-main{
+		display: flex;
+		
+	
+	}
+
+
+}
+
+
 
 
 /* for some reason on my own page, the link text is not white so i need to manually change it with this CSS

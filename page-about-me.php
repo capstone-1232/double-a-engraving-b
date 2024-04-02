@@ -22,7 +22,7 @@ get_header();
         <div class="inner-container">
             <h1>About Me</h1>
             <div class="about-flex-container">
-                <img src="http://www.benishaanand.ca/double-a-engraving/wp-content/uploads/2024/03/allan-anderson-pic.webp"
+                <img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2024/03/allan-anderson-pic.webp"
                     alt="Allan Anderson">
                 <div class="allan-intro-text">
                     <p>Hey there!</p>

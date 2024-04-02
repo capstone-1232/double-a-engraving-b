@@ -16,7 +16,7 @@ get_header();
 
 ?>
 
-<main class="write-a-review-main">
+<main class="write-a-review-main temp-wrapper">
     <!-- start of write a review information -->
 
     <div class="inner-container">
@@ -34,7 +34,7 @@ get_header();
     <!-- start of review form -->
 
     <div class="review-form inner-container">
-        <?php echo do_shortcode('[site_reviews_form class="half-width" assigned_terms="user-testimonials"]') ?>
+        <?php echo do_shortcode('[site_reviews_form class="half-width" assigned_terms="user-testimonials" hide="title,email" ]') ?>
     </div>
     <!-- end of review form -->
 
