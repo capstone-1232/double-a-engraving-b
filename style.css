@@ -1423,25 +1423,25 @@ p {
 
 .product-flex-container {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content:flex-start;
 	gap: 1rem;
 	margin-top: 1.5rem;
 }
 
-.product-card {
+.product-flex-container .product-card {
 	flex: 1 0 48%;
 	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.3);
 	border-radius: 8px;
 	margin-bottom: 1.5rem;
 }
 
-.product-image img {
+.product-flex-container .product-image img {
 	flex: 1 0 100%;
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 }
 
-.product-title p {
+.product-flex-container .product-title p {
 	font-size: clamp(1.3rem, 1.2636rem + 0.1818vw, 1.4rem);
 	line-height: 1.5rem;
 	font-weight: bold;
@@ -1486,6 +1486,87 @@ p {
 	flex: 1 0 46%;
 }
 
+@media screen and (min-width: 800px) {
+
+	/* Landing Page */
+
+	/* Catalog Section */
+	.catalog-container .category-card {
+		flex: 0 0 23%;
+	}
+
+	/* About Me Section */
+	.about-me-flex-container {
+		display: flex;
+		gap: 1rem;
+		justify-content: space-evenly;
+	}
+
+	.allan-anderson-pic-container img {
+		flex: 1 0 75%;
+	}
+
+	.about-me-content {
+		flex: 1 0 50%;
+	}
+
+	.about-me-button {
+		width: 50%;
+	}
+
+
+	/* Products Page */
+
+	.make-a-request-btn {
+		width: 25%;
+	}
+
+	.product-flex-container .product-card {
+		flex: 0 0 30%;
+	}
+
+	.specific-product-archive .category-description {
+		padding-right: 30%;
+	}
+
+	/* Catalog Page */
+
+	.catalog-content {
+		margin-top: 3rem;
+	}
+
+	.catalog-content .category-card {
+		flex: 0 0 30%;
+	}
+
+	.call-to-action,
+	.view-catalog-button,
+	.view-testimonials-button,
+	.tagline-button {
+		width: 25%;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	/* Landing Page */
+
+	/* Location Section */
+	.location-container {
+		display: flex;
+		justify-content: space-evenly;
+		gap: 1rem;
+	}
+
+	.location-content {
+		flex: 1 0 20%;
+	}
+
+	.google-map {
+		max-width: 50%;
+		margin-top: 3rem;
+	}
+}
+
 @media screen and (min-width: 1200px) {
 
 	/* Landing Page */
@@ -1497,7 +1578,10 @@ p {
 	.tagline-container,
 	.catalog-content .catalog-carousel,
 	.catalog-content .inner-container,
-	.catalog-content h1
+	.specific-product-archive .inner-container,
+	.catalog-content h1,
+	.footer-container,
+	.social-icons
 	 {
 		max-width: 1200px;
 		margin: 0 auto;
@@ -1516,46 +1600,6 @@ p {
 
 	.catalog-container .category-card {
 		flex: 0 0 23%;
-	}
-
-	.about-me-flex-container {
-		display: flex;
-		gap: 1rem;
-		justify-content: space-evenly;
-	}
-
-	.allan-anderson-pic-container img {
-		flex: 1 0 75%;
-	}
-
-	.about-me-content {
-		flex: 1 0 50%;
-	}
-
-	.call-to-action,
-	.view-catalog-button,
-	.view-testimonials-button,
-	.tagline-button {
-		width: 25%;
-	}
-
-	.about-me-button {
-		width: 50%;
-	}
-
-	.location-container {
-		display: flex;
-		justify-content: space-evenly;
-		gap: 1rem;
-	}
-
-	.location-content {
-		flex: 1 0 20%;
-	}
-
-	.google-map {
-		max-width: 50%;
-		margin-top: 3rem;
 	}
 
 	.tagline-container {
@@ -1596,14 +1640,15 @@ p {
 
 	.catalog-content .catalog-flex-container {
 		flex-wrap: wrap;
+		justify-content: unset;
 	}
 
 	.catalog-content .category-card {
-		flex: 1 0 22%;
+		flex: 0 0 22%;
 	}
 
-
 }
+
 
 
 
