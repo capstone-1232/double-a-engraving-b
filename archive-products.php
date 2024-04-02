@@ -14,7 +14,7 @@ get_header();
 <?php if ( have_posts()) : ?>
 
 
-    <section>
+    <section class="specific-product-archive">
         <div class="inner-container">
         <div>
             <?php
@@ -49,11 +49,6 @@ get_header();
         <a class="make-a-request-btn">Make a Request</a>
         </div>
     </section>
-   
-
-
-
-
 <?php
 get_footer();
 
