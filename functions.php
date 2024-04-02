@@ -56,7 +56,7 @@ function doubleaengraving_setup()
 	register_nav_menus(
 		array(
 			'headermenu' => esc_html__('Primary', 'doubleaengraving'),
-			'footermenu' => esc_html__('Footer', 'doubleaengraving'),
+	
 		)
 	);
 

@@ -1085,7 +1085,7 @@ p {
 	margin: 0 auto;
 	padding: 1rem;
 	margin-top: 3rem;
-	max-width: 1200px; /*added by jerry, so the text has a max-width */
+	max-width: 1200px; /*added by jerry because the previous max-width caused the footer to have a margin-bottom of 4.5rem */
 }
 
 .social-icons {
@@ -1593,7 +1593,6 @@ p {
 	.catalog-content .inner-container,
 	.specific-product-archive .inner-container,
 	.catalog-content h1,
-	.footer-container,
 	.social-icons
 	 {
 		max-width: 1200px;
@@ -1867,6 +1866,7 @@ i had to take the h1 outside of the section to make the flexbox work */
 /** END of product details related CSS */
 
 /** START of Write a review related CSS */
+
 
 
 .write-a-review-main .glsr-default button.glsr-button {
