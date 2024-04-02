@@ -1085,6 +1085,7 @@ p {
 	margin: 0 auto;
 	padding: 1rem;
 	margin-top: 3rem;
+	max-width: 1200px; /*added by jerry, so the text has a max-width */
 }
 
 .social-icons {
@@ -1780,6 +1781,8 @@ i had to take the h1 outside of the section to make the flexbox work */
 	width: 77%;
 }
 
+.single-product-entry .product-description{}
+
 @media screen and (min-width: 760px) {
 
 	/* media query for when the page will go desktop view */
@@ -1802,6 +1805,28 @@ i had to take the h1 outside of the section to make the flexbox work */
 	}
 
 }
+
+/** END of product details related CSS */
+
+/** START of Write a review related CSS */
+
+
+.write-a-review-main .glsr-default button.glsr-button {
+	width: 77% ;
+	display: block !important;
+
+}
+@media screen and (min-width: 768px){
+	.write-a-review-main{
+		display: flex;
+		
+	
+	}
+
+
+}
+
+
 
 
 /* for some reason on my own page, the link text is not white so i need to manually change it with this CSS

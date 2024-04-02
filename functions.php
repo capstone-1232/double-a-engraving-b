@@ -327,3 +327,22 @@ add_filter('site-reviews/validation/rules', function ($rules) {
     return $rules;
 });
 
+/**
+ * Customises the order of the fields used in the Site Reviews review form.
+ * Paste this in your active theme's functions.php file.
+ * @param array $order
+ * @return array
+ */
+add_filter('site-reviews/review-form/order', function ($order) {
+    // The $order array contains the field keys returned below.
+    // Simply change the order of the field keys to the desired field order.
+    return [
+        'name',
+        'rating',
+        'title',
+        'content',
+        'email',
+        'terms',
+    ];
+});
+
