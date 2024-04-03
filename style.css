@@ -1125,6 +1125,10 @@ p {
 		height: calc(100vh - 30rem)
 		;	
 	}
+
+	.banner-content{
+		padding-top: 3rem;
+	}
 	
 }
 
