@@ -1695,9 +1695,18 @@ but i'll leave it for now until we discuss it*/
 	display: none;
 }
 
-/* .page-header{
-	padding: 0 1rem
-} */
+.view-catalog-button:hover,
+.about-me-button:hover,
+.make-a-request-btn:hover,
+.view-testimonials-button:hover,
+.about-me-button:hover,
+.tagline-button:hover,
+.write-review-button:hover,
+.back-home-button:hover,
+.catalog-button a:hover,
+.request-button a:hover{
+	background-color: #ca0400	;
+}
 
 
 /* START of testimonial card related css  */
@@ -1886,6 +1895,8 @@ i had to take the h1 outside of the section to make the flexbox work */
 }
 
 /** END of product details related CSS */
+
+
 
 /** START of Write a review related CSS */
 
