@@ -1116,7 +1116,7 @@ p {
 .banner-container {
 	padding: 0 1rem;
 	background-color: rgba(0, 0, 0, 0.445);
-	background-image: url("https://karikarij.com/wordpress/wp-content/uploads/2024/04/engravingbanner850px.webp");
+	background-image: url("imgs/engravingbanner850px.webp");
 	background-blend-mode: multiply;
 	background-position: center center;
 	background-size: cover;
@@ -1129,7 +1129,7 @@ p {
 
 @media screen and (min-width: 850px) {
 	.banner-container{
-		background-image: url(https://karikarij.com/wordpress/wp-content/uploads/2024/04/engravingerbanner1400px.webp) ;
+		background-image: url("imgs/engravingerbanner1400px.webp") ;
 			
 	}
 
@@ -1416,7 +1416,7 @@ p {
 	left: 0;
 	width: 100%;
 	height: 100px;
-	background-image: url('http://www.benishaanand.ca/double-a-engraving/wp-content/uploads/2024/03/testimonial-decor.svg');
+	background-image: url('imgs/testimonial-decor.svg');
 	background-size: 2rem;
 	background-repeat: no-repeat;
 	background-position: center top;
