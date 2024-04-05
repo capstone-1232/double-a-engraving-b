@@ -31,14 +31,15 @@
 
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
+		
 		<a class="skip-link screen-reader-text" href="#primary">
 			<?php esc_html_e('Skip to content', 'doubleaengraving'); ?>
 		</a>
 
-		<header id="masthead" class="site-header header-bg-container">
+		<header id="masthead" class="site-header header-bg-container ">
 			<div class="header-container">
 				<nav id="site-navigation" class="main-navigation">
-					<div class="mobile-menu-container">
+					<div class="mobile-menu-container header-bg-container">
 
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"
 							aria-label="Toggle menu"><svg viewBox="0 0 100 80" fill="white" width="40" height="40">

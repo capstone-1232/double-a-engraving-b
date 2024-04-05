@@ -70,6 +70,7 @@ html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 	margin: 0 !important;
+	scroll-behavior: smooth;
 }
 
 /* Sections
@@ -80,6 +81,7 @@ html {
  */
 body {
 	margin: 0;
+	scroll-behavior: smooth;
 }
 
 /**
@@ -711,11 +713,6 @@ textarea {
 	}
 
 
-
-	.header-contaienr .mobile-menu-container {
-		/* make the header sticky */
-
-	}
 }
 
 .site-main .comment-navigation,
@@ -1059,8 +1056,30 @@ p {
 }
 
 
+.main-navigation ul {
+	animation: slideIn 1s ease-in-out;
+}
+
+.menu-headermenu-container{
+	background-color: blue;
+}
+
+@keyframes slideIn {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	
+}
+
+
 
 .header-container {
+	
 	padding: 0 1rem;
 }
 
@@ -1605,8 +1624,7 @@ p {
 	.catalog-content .catalog-carousel,
 	.catalog-content .inner-container,
 	.specific-product-archive .inner-container,
-	.catalog-content h1,
-	.social-icons
+	.catalog-content h1
 	 {
 		max-width: 1200px;
 		margin: 0 auto;
@@ -1686,15 +1704,36 @@ but i'll leave it for now until we discuss it*/
 	margin: 0 auto;
 }
 
+/*back to top button*/
+
+.top{
+	margin-top: 1rem;
+	color: white;
+	text-decoration: none;
+	text-align: left;
+}
+
+.top:before {
+
+  transform: translateY(20%) rotate(-45deg);
+
+}
+
+/* end of back to top button */
+
+
+ /* 404 margin */
 .err-content{
 	margin-bottom: 10rem;
 
 }
+/* end of 404 margin */
 
 #reviews .page-numbers .next{
 	display: none;
 }
 
+/*for hoverstate of all buttons on pages */
 .view-catalog-button:hover,
 .about-me-button:hover,
 .make-a-request-btn:hover,
@@ -1925,6 +1964,7 @@ i had to take the h1 outside of the section to make the flexbox work */
 ignore otherwise */
 header a {
 	color: white;
+	text-align: left;
 }
 
 a:visited {
