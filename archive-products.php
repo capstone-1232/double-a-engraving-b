@@ -46,7 +46,7 @@ get_header();
                 endif;
                 ?>
             </div>
-        <a class="make-a-request-btn">Make a Request</a>
+        <a href="<?php echo esc_url(home_url('/')); ?>custom-request" class="make-a-request-btn">Make a Request</a>
         </div>
     </section>
 <?php

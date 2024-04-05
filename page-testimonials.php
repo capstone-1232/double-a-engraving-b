@@ -25,7 +25,7 @@ get_header();
             <!-- section that contains each customer testimonial -->
             <section class="testimonials">
 
-                <?php echo do_shortcode('[site_reviews pagination="ajax" class="testimonials-decor" hide="date" display="3" assigned_terms="user-testimonials"]') ?>
+                <?php echo do_shortcode('[site_reviews pagination="ajax" id="reviews" class="testimonials-decor" hide="date" display="3" assigned_terms="user-testimonials"]') ?>
 
             </section>
             <!-- end of section that contains each customer testimonial -->

@@ -30,11 +30,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<!-- this implements some hidden SEO - the user is only going to see the logo, but there is text in the background -->
-	<!-- <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-			<?php bloginfo('name'); ?>
-		</a></h1>
-	<?php wp_body_open(); ?> -->
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary">
 			<?php esc_html_e('Skip to content', 'doubleaengraving'); ?>
@@ -51,6 +46,8 @@
                     		<rect y="30" width="85" height="15" rx="6"></rect>
                     		<rect y="60" width="85" height="15" rx="6"></rect>
                 		</svg></button>
+						
+						
 						<!-- site branding also known as custom logo -->
 						<div class="site-branding">
 							<?php
@@ -60,6 +57,8 @@
 						
 					</div>
 					<!-- Nav Menu  -->
+				
+
 					<?php
 					wp_nav_menu(
 						array(
@@ -68,6 +67,7 @@
 						)
 					);
 					?>
+				
 				</nav><!-- #site-navigation -->
 			</div>
 		</header><!-- #masthead -->
