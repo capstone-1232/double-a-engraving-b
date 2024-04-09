@@ -637,6 +637,7 @@ textarea {
 .main-navigation {
 	display: block;
 	width: 100%;
+	position: relative;
 }
 
 .main-navigation ul {
@@ -1051,47 +1052,55 @@ p {
 	top: 0;
 	z-index: 1;
 	color: black;
-	
-	
 }
 
+.bg{
+	background: #353535;
+}
 
-.main-navigation ul {
-	animation: slideIn 1s ease-in-out;
+.sticky-header{
+	top: 0;
+	z-index: 1;
+	position: sticky;
 }
 
 .menu-headermenu-container{
-	background-color: blue;
+	background-color: #353535;
 }
 
-@keyframes slideIn {
-	0% {
-		opacity: 0;
-		transform: translateY(-20px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-	
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
-
-
-.header-container {
-	
-	padding: 0 1rem;
+.main-navigation.toggled .menu-headermenu-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slideInFromTop 0.5s ease-out forwards;
+    transform: translateY(-100%);
+	width: 100%;
 }
 
-
+.header-bg-container.toggled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slideInFromTop 0.5s ease-out forwards;
+    transform: translateY(-100%);
+	width: 100%;
+}
 
 
 .mobile-menu-container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-top: 0.5rem;
-	padding-bottom: 0.5rem;
+	padding: 0.5rem 1rem;
 }
 
 .site-branding img {

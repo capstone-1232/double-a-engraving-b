@@ -24,41 +24,44 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Calligraffitti&family=Luxurious+Roman&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Calligraffitti&family=Luxurious+Roman&display=swap"
+		rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
-		
+
 		<a class="skip-link screen-reader-text" href="#primary">
 			<?php esc_html_e('Skip to content', 'doubleaengraving'); ?>
 		</a>
 
-		<header id="masthead" class="site-header header-bg-container ">
-			<div class="header-container">
+		<header id="masthead" class="site-header sticky-header ">
+			
+			<div class="header-container sticky-header">
 				<nav id="site-navigation" class="main-navigation">
 					<div class="mobile-menu-container header-bg-container">
 
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"
 							aria-label="Toggle menu"><svg viewBox="0 0 100 80" fill="white" width="40" height="40">
-                    		<rect width="85" height="15" rx="6"></rect>
-                    		<rect y="30" width="85" height="15" rx="6"></rect>
-                    		<rect y="60" width="85" height="15" rx="6"></rect>
-                		</svg></button>
-						
-						
+								<rect width="85" height="15" rx="6"></rect>
+								<rect y="30" width="85" height="15" rx="6"></rect>
+								<rect y="60" width="85" height="15" rx="6"></rect>
+							</svg></button>
+
+
 						<!-- site branding also known as custom logo -->
 						<div class="site-branding">
 							<?php
 							the_custom_logo();
 							?>
 						</div>
-						
+
 					</div>
 					<!-- Nav Menu  -->
-				
+
 
 					<?php
 					wp_nav_menu(
@@ -68,7 +71,7 @@
 						)
 					);
 					?>
-				
+
 				</nav><!-- #site-navigation -->
 			</div>
 		</header><!-- #masthead -->
