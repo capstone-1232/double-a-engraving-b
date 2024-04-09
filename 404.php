@@ -10,14 +10,14 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main temp-wrapper">
 
-		<section class="error-404 not-found">
+		<section class="error-404 not-found inner-container">
 			<header class="page-header">
 				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'doubleaengraving' ); ?></h1>
 			</header><!-- .page-header -->
 
-			<div class="page-content">
+			<div class="err-content">
 				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'doubleaengraving' ); ?></p>
 
 				<p>If you'd like to return back Home click the button below.</p>

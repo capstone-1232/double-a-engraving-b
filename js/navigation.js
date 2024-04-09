@@ -40,7 +40,10 @@
 		} else {
 			button.setAttribute( 'aria-expanded', 'true' );
 		}
+
+		
 	} );
+
 
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
 	document.addEventListener( 'click', function( event ) {

@@ -38,11 +38,11 @@ get_header();
                     <?php the_field('product_description'); ?>
                 </p>
                 <div class="request-button">
-                    <a>Make A Request</a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>custom-request">Make A Request</a>
                 </div>
 
                 <div class="catalog-button">
-                    <a>Back to Catalog</a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>catalog">Back to Catalog</a>
                 </div>
             </div>
         </section>

@@ -24,7 +24,8 @@ get_header();
                 <p> Offering affordable, custom laser engravings on a variety of materials.
                     If you imagine it, I create it.</p>
                 <div>
-                    <a class="call-to-action" href="<?php echo esc_url(home_url('/')); ?>custom-request" type="button">Make
+                    <a class="call-to-action" href="<?php echo esc_url(home_url('/')); ?>custom-request"
+                        type="button">Make
                         a
                         Request</a>
                 </div>
@@ -43,7 +44,7 @@ get_header();
         <h2>Carved Collections</h2>
         <p>Explore our collection and the versatility of engravings across
             a range of materials.</p>
-        <p>Click the button to view more categories.</p>   
+        <p>Click the button to view more categories.</p>
 
         <!-- when CSS is implemented, this will display images at 2x2 on mobile screens
             then 4x4 on larger screens -->
@@ -69,7 +70,9 @@ get_header();
                     <div class="category-image">
                         <a href="<?php echo esc_url($url); ?>">
                             <!-- grabs the category image, sets its size to the custom size, and grabs alt text -->
+                            
                             <?php z_taxonomy_image($cat->term_id, $size, $attr); ?>
+                            
                         </a>
                     </div>
                     <!-- section for the category name -->
@@ -116,11 +119,13 @@ get_header();
                     alt="Allan Anderson">
             </div>
             <div class="about-me-content">
-                <p>I am Allan Anderson, I have been laser engraving since 2022. I work out of my home and sell products at
+                <p>I am Allan Anderson, I have been laser engraving since 2022. I work out of my home and sell products
+                    at
                     various farmers markets around Edmonton.</p>
                 <p> It started as a hobby first but after retiring, I turned it into a
                     business and it has been awesome.</p>
-                <a class="about-me-button" href="<?php echo esc_url(home_url('/')); ?>about-me" type="button"> More About Me</a>
+                <a class="about-me-button" href="<?php echo esc_url(home_url('/')); ?>about-me" type="button"> More
+                    About Me</a>
             </div>
         </div>
     </section>
@@ -130,7 +135,8 @@ get_header();
         <div class="location-content">
             <h2>Location</h2>
             <p>To meet in person or buy any products, come over to <u> Capilano Mall, 5004 98 Ave Edmonton </u>.</p>
-            <p>I am available on Saturdays from <u>9:30 AM - 3:00 PM.</u> You can also reach out to me at <u>780-220-9681.
+            <p>I am available on Saturdays from <u>9:30 AM - 3:00 PM.</u> You can also reach out to me at
+                <u>780-220-9681.
                 </u></p>
             <p> Use the google maps below to get accurate location details.</p>
         </div>
