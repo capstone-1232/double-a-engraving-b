@@ -1742,6 +1742,17 @@ but i'll leave it for now until we discuss it*/
 	text-align: left;
 }
 
+.category-card,
+.specific-product-archive .product-card {
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .category-card:hover,
+  .specific-product-archive 	.product-card:hover {
+	transform: scale(1.1);
+  }
+
+
 .top:before {
 
 	transform: translateY(20%) rotate(-45deg);
@@ -1919,6 +1930,11 @@ but i'll leave it for now until we discuss it*/
 /* END of contact info page related CSS */
 
 /* START of product details related CSS */
+
+/* this is to force small/uneven ratios to be square */	
+.category-image img{
+	aspect-ratio: 1/1 !important;
+}
 
 /*provides some spacing on the h1 inside product details. this is because
 i had to take the h1 outside of the section to make the flexbox work */

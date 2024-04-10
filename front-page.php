@@ -115,7 +115,7 @@ get_header();
         <h2> About Me</h2>
         <div class="about-me-flex-container">
             <div class="allan-anderson-pic-container">
-                <img src="https://karikarij.com/wordpress/wp-content/uploads/2024/03/allan-anderson-pic.webp"
+                <img src="https://karikarij.com/wordpress/wp-content/uploads/2024/03/allan-anderson-edit.png"
                     alt="Allan Anderson">
             </div>
             <div class="about-me-content">

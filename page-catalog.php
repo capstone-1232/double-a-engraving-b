@@ -20,7 +20,7 @@ get_header();
 
     <!-- Carousel Section  -->
     <div class="catalog-carousel">
-    <?php echo do_shortcode('[sp_wpcarousel id="242"]'); ?>
+    <?php echo do_shortcode('[sp_wpcarousel id="281"]'); ?>
     </div>
     <!-- end of carousel section -->
 

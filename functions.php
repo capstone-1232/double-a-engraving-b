@@ -49,8 +49,10 @@ function doubleaengraving_setup()
 	add_theme_support('post-thumbnails');
 	//add image sizing
 
-	// add_image_size('category-thumb', 250, 250, true); // size for category thumbnails
-	// add_image_size('front-thumb', 350, 350, true); // these are placeholder sizes.
+	add_image_size('category-thumb', 250, 250, true); // size for category thumbnails
+	add_image_size('front-thumb', 350, 350, true); // these are placeholder sizes.
+	add_image_size('carousel-thumb', 500, 500, true); // these are placeholder sizes.
+	add_image_size('product-size', 750, 750, true	); // size for product images
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(

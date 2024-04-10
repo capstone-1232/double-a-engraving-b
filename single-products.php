@@ -22,10 +22,10 @@ get_header();
 
                 <div class="product-image">
                     <?php
-
+                    $size = 'product-size';
                     $image = get_field('product_image');
                     if ($image) {
-                        echo wp_get_attachment_image($image, 'full');
+                        echo wp_get_attachment_image($image, $size);
                     }
                     ?>
                 </div>
