@@ -70,9 +70,9 @@ get_header();
                     <div class="category-image">
                         <a href="<?php echo esc_url($url); ?>">
                             <!-- grabs the category image, sets its size to the custom size, and grabs alt text -->
-                            
+
                             <?php z_taxonomy_image($cat->term_id, $size, $attr); ?>
-                            
+
                         </a>
                     </div>
                     <!-- section for the category name -->
@@ -136,8 +136,9 @@ get_header();
             <h2>Location</h2>
             <p>To meet in person or buy any products, come over to <u> Capilano Mall, 5004 98 Ave Edmonton </u>.</p>
             <p>I am available on Saturdays from <u>9:30 AM - 3:00 PM.</u> You can also reach out to me at
-                <u>780-220-9681.
-                </u></p>
+                <u>780-220-9681.</u>
+                
+            </p>
             <p> Use the google maps below to get accurate location details.</p>
         </div>
         <div class="google-map">
